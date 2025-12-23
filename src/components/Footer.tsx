@@ -1,14 +1,8 @@
 import { Phone, Mail, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <footer className="bg-primary text-primary-foreground">
@@ -16,7 +10,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-3 mb-6">
+            <Link to="/" className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center">
                 <span className="text-accent-foreground font-heading font-bold text-xl">SP</span>
               </div>
@@ -24,7 +18,7 @@ const Footer = () => {
                 <h3 className="font-heading font-bold text-xl">Sun Polymers</h3>
                 <p className="text-primary-foreground/70 text-sm">Since 1990</p>
               </div>
-            </div>
+            </Link>
             <p className="text-primary-foreground/80 mb-6 max-w-md leading-relaxed">
               Pioneer in plastic injection moulding with over 34 years of experience. 
               ISO 9001:2015 certified manufacturer of high-precision plastic products 
@@ -57,20 +51,19 @@ const Footer = () => {
             <h4 className="font-heading font-bold text-lg mb-6">Quick Links</h4>
             <ul className="space-y-3">
               {[
-                { href: "#home", label: "Home" },
-                { href: "#about", label: "About Us" },
-                { href: "#products", label: "Products" },
-                { href: "#industries", label: "Industries" },
-                { href: "#achievements", label: "Achievements" },
-                { href: "#contact", label: "Contact" },
+                { href: "/", label: "Home" },
+                { href: "/about", label: "About Us" },
+                { href: "/products", label: "Products" },
+                { href: "/industries", label: "Industries" },
+                { href: "/contact", label: "Contact" },
               ].map((link) => (
                 <li key={link.href}>
-                  <button
-                    onClick={() => scrollToSection(link.href)}
+                  <Link
+                    to={link.href}
                     className="text-primary-foreground/80 hover:text-accent transition-colors"
                   >
                     {link.label}
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>

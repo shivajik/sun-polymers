@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, Award, Factory, Users } from "lucide-react";
 import heroImage from "@/assets/hero-manufacturing.jpg";
+import { Link } from "react-router-dom";
 
 const stats = [
   { icon: Factory, value: "34+", label: "Years Experience" },
@@ -10,13 +11,6 @@ const stats = [
 ];
 
 const HeroSection = () => {
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section id="home" className="relative min-h-[90vh] flex items-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -75,12 +69,16 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4 mb-12"
           >
-            <Button variant="hero" size="xl" onClick={() => scrollToSection("#contact")}>
-              Request a Quote
-              <ArrowRight className="w-5 h-5" />
+            <Button variant="hero" size="xl" asChild>
+              <Link to="/contact">
+                Request a Quote
+                <ArrowRight className="w-5 h-5" />
+              </Link>
             </Button>
-            <Button variant="hero-outline" size="xl" onClick={() => scrollToSection("#products")}>
-              Explore Products
+            <Button variant="hero-outline" size="xl" asChild>
+              <Link to="/products">
+                Explore Products
+              </Link>
             </Button>
           </motion.div>
 
