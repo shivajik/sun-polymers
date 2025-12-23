@@ -12,11 +12,11 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <Link to="/" className="inline-block mb-6">
+            <Link to="/" className="inline-block mb-6 bg-white rounded-lg px-4 py-2">
               <img 
                 src={logo} 
                 alt="Sun Polymers - Since 1990, An ISO 9001:2015 Company" 
-                className="h-14 w-auto brightness-0 invert"
+                className="h-12 w-auto"
               />
             </Link>
             <p className="text-primary-foreground/80 mb-6 max-w-md leading-relaxed">
