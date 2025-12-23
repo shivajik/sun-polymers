@@ -1,6 +1,7 @@
 import { Phone, Mail, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { productCategories } from "@/data/productCategories";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,14 +12,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <Link to="/" className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center">
-                <span className="text-accent-foreground font-heading font-bold text-xl">SP</span>
-              </div>
-              <div>
-                <h3 className="font-heading font-bold text-xl">Sun Polymers</h3>
-                <p className="text-primary-foreground/70 text-sm">Since 1990</p>
-              </div>
+            <Link to="/" className="inline-block mb-6">
+              <img 
+                src={logo} 
+                alt="Sun Polymers - Since 1990, An ISO 9001:2015 Company" 
+                className="h-14 w-auto brightness-0 invert"
+              />
             </Link>
             <p className="text-primary-foreground/80 mb-6 max-w-md leading-relaxed">
               Pioneer in plastic injection moulding with over 34 years of experience. 

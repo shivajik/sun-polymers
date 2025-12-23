@@ -4,6 +4,7 @@ import { Menu, X, Phone, Mail, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import { productCategories } from "@/data/productCategories";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -86,16 +87,12 @@ const Header = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl bg-gradient-accent flex items-center justify-center">
-                <span className="text-accent-foreground font-heading font-bold text-xl">SP</span>
-              </div>
-              <div className="hidden sm:block">
-                <h1 className="font-heading font-bold text-xl text-foreground leading-tight">
-                  Sun Polymers
-                </h1>
-                <p className="text-xs text-muted-foreground">Since 1990</p>
-              </div>
+            <Link to="/" className="flex items-center">
+              <img 
+                src={logo} 
+                alt="Sun Polymers - Since 1990, An ISO 9001:2015 Company" 
+                className="h-14 w-auto"
+              />
             </Link>
 
             {/* Desktop Navigation */}
