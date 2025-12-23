@@ -140,28 +140,31 @@ const Header = () => {
                 <AnimatePresence>
                   {isProductsOpen && (
                     <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
-                      transition={{ duration: 0.2 }}
+                      initial={{ opacity: 0, y: 8, scale: 0.96 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 8, scale: 0.96 }}
+                      transition={{ duration: 0.15, ease: "easeOut" }}
                       onMouseLeave={() => setIsProductsOpen(false)}
-                      className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[700px] bg-card rounded-2xl shadow-lg border border-border p-6 z-50"
+                      className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[520px] bg-card rounded-xl shadow-xl border border-border/60 overflow-hidden z-50"
                     >
-                      {/* Arrow pointer */}
-                      <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-card border-l border-t border-border rotate-45" />
+                      {/* Gradient accent bar */}
+                      <div className="h-1 bg-gradient-accent" />
                       
-                      <div className="relative">
-                        <div className="flex justify-between items-center mb-4 pb-3 border-b border-border">
-                          <h3 className="font-heading font-bold text-lg text-foreground">Our Products</h3>
+                      <div className="p-4">
+                        {/* Header */}
+                        <div className="flex justify-between items-center mb-3">
+                          <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Products</span>
                           <Link 
                             to="/products" 
-                            className="text-sm text-accent hover:underline"
+                            className="text-xs font-medium text-accent hover:underline flex items-center gap-1"
                           >
-                            View All Products →
+                            View All
+                            <ChevronDown className="w-3 h-3 -rotate-90" />
                           </Link>
                         </div>
                         
-                        <div className="grid grid-cols-3 gap-2">
+                        {/* Products Grid - 4 columns, compact */}
+                        <div className="grid grid-cols-4 gap-1">
                           {productCategories.map((product) => {
                             const Icon = product.icon;
                             const isCurrentProduct = location.pathname === `/products/${product.slug}`;
@@ -169,29 +172,40 @@ const Header = () => {
                               <Link
                                 key={product.slug}
                                 to={`/products/${product.slug}`}
-                                className={`group flex items-center gap-3 p-3 rounded-xl transition-all duration-200 ${
-                                  isCurrentProduct 
-                                    ? "bg-accent/10 text-accent" 
-                                    : "hover:bg-muted"
-                                }`}
-                              >
-                                <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 transition-all duration-200 ${
+                                className={`group flex flex-col items-center gap-1.5 p-2.5 rounded-lg transition-all duration-150 text-center ${
                                   isCurrentProduct 
                                     ? "bg-accent text-accent-foreground" 
-                                    : "bg-muted group-hover:bg-accent/20"
-                                }`}>
-                                  <Icon className={`w-5 h-5 ${isCurrentProduct ? "" : "text-accent"}`} />
-                                </div>
-                                <span className={`text-sm font-medium leading-tight ${
+                                    : "hover:bg-primary/5"
+                                }`}
+                              >
+                                <div className={`w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-150 ${
                                   isCurrentProduct 
-                                    ? "text-accent" 
-                                    : "text-foreground group-hover:text-accent"
+                                    ? "bg-accent-foreground/20" 
+                                    : "bg-accent/10 group-hover:bg-accent/20 group-hover:scale-110"
+                                }`}>
+                                  <Icon className={`w-4 h-4 ${isCurrentProduct ? "text-accent-foreground" : "text-accent"}`} />
+                                </div>
+                                <span className={`text-[11px] font-medium leading-tight line-clamp-2 ${
+                                  isCurrentProduct 
+                                    ? "text-accent-foreground" 
+                                    : "text-foreground/80 group-hover:text-accent"
                                 }`}>
                                   {product.shortName}
                                 </span>
                               </Link>
                             );
                           })}
+                        </div>
+
+                        {/* Quick CTA */}
+                        <div className="mt-3 pt-3 border-t border-border/50 flex items-center justify-between">
+                          <span className="text-xs text-muted-foreground">Need custom solutions?</span>
+                          <Link 
+                            to="/contact" 
+                            className="text-xs font-semibold text-accent hover:underline"
+                          >
+                            Get a Quote →
+                          </Link>
                         </div>
                       </div>
                     </motion.div>
