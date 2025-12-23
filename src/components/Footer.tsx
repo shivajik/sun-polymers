@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
+import { productCategories } from "@/data/productCategories";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -53,8 +54,7 @@ const Footer = () => {
               {[
                 { href: "/", label: "Home" },
                 { href: "/about", label: "About Us" },
-                { href: "/products", label: "Products" },
-                { href: "/industries", label: "Industries" },
+                { href: "/products", label: "All Products" },
                 { href: "/contact", label: "Contact" },
               ].map((link) => (
                 <li key={link.href}>
@@ -69,23 +69,28 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Industries */}
+          {/* Products */}
           <div>
-            <h4 className="font-heading font-bold text-lg mb-6">Industries</h4>
+            <h4 className="font-heading font-bold text-lg mb-6">Products</h4>
             <ul className="space-y-3">
-              {[
-                "Appliances",
-                "Luggage",
-                "Stationery",
-                "Electrical & Electronics",
-                "Telecommunication",
-                "Agriculture",
-                "Sports",
-              ].map((industry) => (
-                <li key={industry} className="text-primary-foreground/80">
-                  {industry}
+              {productCategories.slice(0, 7).map((product) => (
+                <li key={product.slug}>
+                  <Link
+                    to={`/products/${product.slug}`}
+                    className="text-primary-foreground/80 hover:text-accent transition-colors text-sm"
+                  >
+                    {product.shortName}
+                  </Link>
                 </li>
               ))}
+              <li>
+                <Link
+                  to="/products"
+                  className="text-accent hover:underline text-sm"
+                >
+                  View All →
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
