@@ -145,22 +145,22 @@ const Header = () => {
                       exit={{ opacity: 0, y: 10 }}
                       transition={{ duration: 0.2, ease: "easeOut" }}
                       onMouseLeave={() => setIsProductsOpen(false)}
-                      className="absolute top-full left-0 mt-1 w-[280px] bg-background rounded-lg shadow-2xl border border-border z-50"
+                      className="absolute top-full left-0 mt-1 w-[420px] bg-background rounded-lg shadow-2xl border border-border z-50"
                       style={{ boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)' }}
                     >
-                      {/* Simple list style mega menu */}
-                      <div className="py-2">
-                        {productCategories.map((product, index) => {
+                      {/* 2 Column Grid */}
+                      <div className="p-3 grid grid-cols-2 gap-1">
+                        {productCategories.map((product) => {
                           const Icon = product.icon;
                           const isCurrentProduct = location.pathname === `/products/${product.slug}`;
                           return (
                             <Link
                               key={product.slug}
                               to={`/products/${product.slug}`}
-                              className={`flex items-center gap-3 px-4 py-2.5 transition-colors ${
+                              className={`flex items-center gap-2.5 px-3 py-2 rounded-md transition-colors ${
                                 isCurrentProduct 
-                                  ? "bg-accent/10 text-accent border-l-2 border-accent" 
-                                  : "hover:bg-muted/50 border-l-2 border-transparent hover:border-accent/50"
+                                  ? "bg-accent/10 text-accent" 
+                                  : "hover:bg-muted/60"
                               }`}
                             >
                               <Icon className={`w-4 h-4 flex-shrink-0 ${isCurrentProduct ? "text-accent" : "text-muted-foreground"}`} />
@@ -177,7 +177,7 @@ const Header = () => {
                       </div>
                       
                       {/* Footer */}
-                      <div className="border-t border-border px-4 py-3 bg-muted/30">
+                      <div className="border-t border-border px-4 py-2.5 bg-muted/30">
                         <Link 
                           to="/products" 
                           className="flex items-center justify-between text-sm font-medium text-accent hover:underline"
