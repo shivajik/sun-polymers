@@ -2,19 +2,20 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link, useLocation } from "react-router-dom";
 
 const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About Us" },
-  { href: "#products", label: "Products" },
-  { href: "#industries", label: "Industries" },
-  { href: "#achievements", label: "Achievements" },
-  { href: "#contact", label: "Contact" },
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About Us" },
+  { href: "/products", label: "Products" },
+  { href: "/industries", label: "Industries" },
+  { href: "/contact", label: "Contact" },
 ];
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,12 +25,11 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+  const isActive = (href: string) => {
+    if (href === "/") {
+      return location.pathname === "/";
     }
-    setIsMobileMenuOpen(false);
+    return location.pathname.startsWith(href);
   };
 
   return (
@@ -64,7 +64,7 @@ const Header = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <a href="#home" className="flex items-center gap-3" onClick={() => scrollToSection("#home")}>
+            <Link to="/" className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-xl bg-gradient-accent flex items-center justify-center">
                 <span className="text-accent-foreground font-heading font-bold text-xl">SP</span>
               </div>
@@ -74,25 +74,29 @@ const Header = () => {
                 </h1>
                 <p className="text-xs text-muted-foreground">Since 1990</p>
               </div>
-            </a>
+            </Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-1">
               {navLinks.map((link) => (
-                <button
+                <Link
                   key={link.href}
-                  onClick={() => scrollToSection(link.href)}
-                  className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-accent transition-colors rounded-lg hover:bg-accent/10"
+                  to={link.href}
+                  className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
+                    isActive(link.href)
+                      ? "text-accent bg-accent/10"
+                      : "text-foreground/80 hover:text-accent hover:bg-accent/10"
+                  }`}
                 >
                   {link.label}
-                </button>
+                </Link>
               ))}
             </nav>
 
             {/* CTA Button */}
             <div className="hidden lg:block">
-              <Button variant="accent" size="lg" onClick={() => scrollToSection("#contact")}>
-                Get a Quote
+              <Button variant="accent" size="lg" asChild>
+                <Link to="/contact">Get a Quote</Link>
               </Button>
             </div>
 
@@ -118,16 +122,23 @@ const Header = () => {
             >
               <nav className="container mx-auto px-4 py-4 flex flex-col gap-2">
                 {navLinks.map((link) => (
-                  <button
+                  <Link
                     key={link.href}
-                    onClick={() => scrollToSection(link.href)}
-                    className="px-4 py-3 text-left text-foreground hover:text-accent hover:bg-accent/10 rounded-lg transition-colors"
+                    to={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={`px-4 py-3 text-left rounded-lg transition-colors ${
+                      isActive(link.href)
+                        ? "text-accent bg-accent/10"
+                        : "text-foreground hover:text-accent hover:bg-accent/10"
+                    }`}
                   >
                     {link.label}
-                  </button>
+                  </Link>
                 ))}
-                <Button variant="accent" className="mt-4" onClick={() => scrollToSection("#contact")}>
-                  Get a Quote
+                <Button variant="accent" className="mt-4" asChild>
+                  <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
+                    Get a Quote
+                  </Link>
                 </Button>
               </nav>
             </motion.div>

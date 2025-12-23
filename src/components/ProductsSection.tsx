@@ -3,6 +3,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Cog, Zap, Package, Settings, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const products = [
   {
@@ -34,13 +35,6 @@ const products = [
 const ProductsSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-  const scrollToContact = () => {
-    const element = document.querySelector("#contact");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <section id="products" className="py-20 lg:py-32 bg-background relative">
@@ -105,9 +99,11 @@ const ProductsSection = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-center"
         >
-          <Button variant="accent" size="xl" onClick={scrollToContact}>
-            Discuss Your Requirements
-            <ArrowRight className="w-5 h-5" />
+          <Button variant="accent" size="xl" asChild>
+            <Link to="/contact">
+              Discuss Your Requirements
+              <ArrowRight className="w-5 h-5" />
+            </Link>
           </Button>
         </motion.div>
       </div>
