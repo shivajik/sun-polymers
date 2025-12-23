@@ -140,73 +140,51 @@ const Header = () => {
                 <AnimatePresence>
                   {isProductsOpen && (
                     <motion.div
-                      initial={{ opacity: 0, y: 8, scale: 0.96 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{ opacity: 0, y: 8, scale: 0.96 }}
-                      transition={{ duration: 0.15, ease: "easeOut" }}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      transition={{ duration: 0.2, ease: "easeOut" }}
                       onMouseLeave={() => setIsProductsOpen(false)}
-                      className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[520px] bg-card rounded-xl shadow-xl border border-border/60 overflow-hidden z-50"
+                      className="absolute top-full left-0 mt-1 w-[280px] bg-background rounded-lg shadow-2xl border border-border z-50"
+                      style={{ boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)' }}
                     >
-                      {/* Gradient accent bar */}
-                      <div className="h-1 bg-gradient-accent" />
+                      {/* Simple list style mega menu */}
+                      <div className="py-2">
+                        {productCategories.map((product, index) => {
+                          const Icon = product.icon;
+                          const isCurrentProduct = location.pathname === `/products/${product.slug}`;
+                          return (
+                            <Link
+                              key={product.slug}
+                              to={`/products/${product.slug}`}
+                              className={`flex items-center gap-3 px-4 py-2.5 transition-colors ${
+                                isCurrentProduct 
+                                  ? "bg-accent/10 text-accent border-l-2 border-accent" 
+                                  : "hover:bg-muted/50 border-l-2 border-transparent hover:border-accent/50"
+                              }`}
+                            >
+                              <Icon className={`w-4 h-4 flex-shrink-0 ${isCurrentProduct ? "text-accent" : "text-muted-foreground"}`} />
+                              <span className={`text-sm ${
+                                isCurrentProduct 
+                                  ? "text-accent font-medium" 
+                                  : "text-foreground"
+                              }`}>
+                                {product.shortName}
+                              </span>
+                            </Link>
+                          );
+                        })}
+                      </div>
                       
-                      <div className="p-4">
-                        {/* Header */}
-                        <div className="flex justify-between items-center mb-3">
-                          <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Products</span>
-                          <Link 
-                            to="/products" 
-                            className="text-xs font-medium text-accent hover:underline flex items-center gap-1"
-                          >
-                            View All
-                            <ChevronDown className="w-3 h-3 -rotate-90" />
-                          </Link>
-                        </div>
-                        
-                        {/* Products Grid - 4 columns, compact */}
-                        <div className="grid grid-cols-4 gap-1">
-                          {productCategories.map((product) => {
-                            const Icon = product.icon;
-                            const isCurrentProduct = location.pathname === `/products/${product.slug}`;
-                            return (
-                              <Link
-                                key={product.slug}
-                                to={`/products/${product.slug}`}
-                                className={`group flex flex-col items-center gap-1.5 p-2.5 rounded-lg transition-all duration-150 text-center ${
-                                  isCurrentProduct 
-                                    ? "bg-accent text-accent-foreground" 
-                                    : "hover:bg-primary/5"
-                                }`}
-                              >
-                                <div className={`w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-150 ${
-                                  isCurrentProduct 
-                                    ? "bg-accent-foreground/20" 
-                                    : "bg-accent/10 group-hover:bg-accent/20 group-hover:scale-110"
-                                }`}>
-                                  <Icon className={`w-4 h-4 ${isCurrentProduct ? "text-accent-foreground" : "text-accent"}`} />
-                                </div>
-                                <span className={`text-[11px] font-medium leading-tight line-clamp-2 ${
-                                  isCurrentProduct 
-                                    ? "text-accent-foreground" 
-                                    : "text-foreground/80 group-hover:text-accent"
-                                }`}>
-                                  {product.shortName}
-                                </span>
-                              </Link>
-                            );
-                          })}
-                        </div>
-
-                        {/* Quick CTA */}
-                        <div className="mt-3 pt-3 border-t border-border/50 flex items-center justify-between">
-                          <span className="text-xs text-muted-foreground">Need custom solutions?</span>
-                          <Link 
-                            to="/contact" 
-                            className="text-xs font-semibold text-accent hover:underline"
-                          >
-                            Get a Quote →
-                          </Link>
-                        </div>
+                      {/* Footer */}
+                      <div className="border-t border-border px-4 py-3 bg-muted/30">
+                        <Link 
+                          to="/products" 
+                          className="flex items-center justify-between text-sm font-medium text-accent hover:underline"
+                        >
+                          <span>View All Products</span>
+                          <ChevronDown className="w-4 h-4 -rotate-90" />
+                        </Link>
                       </div>
                     </motion.div>
                   )}
