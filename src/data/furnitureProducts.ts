@@ -8,6 +8,16 @@ import cornerBracket2 from "@/assets/products/furniture/corner-bracket-2.jpg";
 import lBracket from "@/assets/products/furniture/l-bracket.jpg";
 import bedClip from "@/assets/products/furniture/bed-clip.jpg";
 import tConnector from "@/assets/products/furniture/t-connector.jpg";
+import cornerJointBlack from "@/assets/products/furniture/corner-joint-black.jpg";
+import lJointBracket from "@/assets/products/furniture/l-joint-bracket.jpg";
+import cornerPlate from "@/assets/products/furniture/corner-plate.jpg";
+import channelClip from "@/assets/products/furniture/channel-clip.jpg";
+import pivotBracket from "@/assets/products/furniture/pivot-bracket.jpg";
+import endCapRectangular from "@/assets/products/furniture/end-cap-rectangular.jpg";
+import tubeSleeve from "@/assets/products/furniture/tube-sleeve.jpg";
+import handleGrip from "@/assets/products/furniture/handle-grip.jpg";
+import roundEndCap from "@/assets/products/furniture/round-end-cap.jpg";
+import drawerHandle from "@/assets/products/furniture/drawer-handle.jpg";
 
 export interface FurnitureProduct {
   id: string;
@@ -76,5 +86,65 @@ export const furnitureProducts: FurnitureProduct[] = [
     name: "T-Connector",
     description: "T-shaped connector for mid-frame furniture joints",
     image: tConnector,
+  },
+  {
+    id: "corner-joint-black",
+    name: "Corner Joint (Black)",
+    description: "Heavy-duty black corner joint for robust furniture frames",
+    image: cornerJointBlack,
+  },
+  {
+    id: "l-joint-bracket",
+    name: "L-Joint Bracket",
+    description: "Angled L-joint bracket with pin connector for secure assembly",
+    image: lJointBracket,
+  },
+  {
+    id: "corner-plate",
+    name: "Corner Plate",
+    description: "Reinforced corner plate with diagonal ribbing for extra strength",
+    image: cornerPlate,
+  },
+  {
+    id: "channel-clip",
+    name: "Channel Clip",
+    description: "Snap-fit channel clip for panel and board mounting",
+    image: channelClip,
+  },
+  {
+    id: "pivot-bracket",
+    name: "Pivot Bracket",
+    description: "Rotating pivot bracket for adjustable furniture components",
+    image: pivotBracket,
+  },
+  {
+    id: "end-cap-rectangular",
+    name: "Rectangular End Cap",
+    description: "Protective end cap for rectangular tube profiles",
+    image: endCapRectangular,
+  },
+  {
+    id: "tube-sleeve",
+    name: "Tube Sleeve",
+    description: "Protective sleeve for round tube connections",
+    image: tubeSleeve,
+  },
+  {
+    id: "handle-grip",
+    name: "Handle Grip",
+    description: "Ergonomic handle grip for drawers and cabinet doors",
+    image: handleGrip,
+  },
+  {
+    id: "round-end-cap",
+    name: "Round End Cap",
+    description: "Ribbed end cap for round tube furniture legs",
+    image: roundEndCap,
+  },
+  {
+    id: "drawer-handle",
+    name: "Drawer Handle",
+    description: "Sleek drawer handle for modern furniture applications",
+    image: drawerHandle,
   },
 ];
