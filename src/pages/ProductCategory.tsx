@@ -181,11 +181,11 @@ const ProductCategory = () => {
                         className="group bg-card rounded-xl overflow-hidden shadow-card hover:shadow-medium transition-all duration-300 border border-border/50 hover:border-accent/30 cursor-pointer"
                         onClick={() => setSelectedImage({ src: item.image, name: item.name })}
                       >
-                        <div className="aspect-square overflow-hidden bg-muted">
+                        <div className="aspect-square overflow-hidden bg-white flex items-center justify-center p-2">
                           <img
                             src={item.image}
                             alt={item.name}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
                           />
                         </div>
                         <div className="p-4">
