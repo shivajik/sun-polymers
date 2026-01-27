@@ -2,8 +2,13 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
-import { CheckCircle, ArrowRight, ArrowLeft } from "lucide-react";
+import { useRef, useState } from "react";
+import { CheckCircle, ArrowRight, ArrowLeft, X } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogClose,
+} from "@/components/ui/dialog";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -15,6 +20,7 @@ const ProductCategory = () => {
   const product = getProductBySlug(slug || "");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [selectedImage, setSelectedImage] = useState<{ src: string; name: string } | null>(null);
 
   if (!product) {
     return <Navigate to="/products" replace />;
@@ -172,7 +178,8 @@ const ProductCategory = () => {
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={isInView ? { opacity: 1, scale: 1 } : {}}
                         transition={{ duration: 0.4, delay: 0.05 * index }}
-                        className="group bg-card rounded-xl overflow-hidden shadow-card hover:shadow-medium transition-all duration-300 border border-border/50 hover:border-accent/30"
+                        className="group bg-card rounded-xl overflow-hidden shadow-card hover:shadow-medium transition-all duration-300 border border-border/50 hover:border-accent/30 cursor-pointer"
+                        onClick={() => setSelectedImage({ src: item.image, name: item.name })}
                       >
                         <div className="aspect-square overflow-hidden bg-muted">
                           <img
@@ -285,6 +292,29 @@ const ProductCategory = () => {
           </section>
         </main>
         <Footer />
+
+        {/* Image Lightbox */}
+        <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+          <DialogContent className="max-w-4xl p-0 overflow-hidden bg-background border-border">
+            <DialogClose className="absolute right-4 top-4 z-10 rounded-full bg-background/80 p-2 hover:bg-background transition-colors">
+              <X className="h-5 w-5 text-foreground" />
+            </DialogClose>
+            {selectedImage && (
+              <div className="flex flex-col">
+                <div className="relative aspect-square md:aspect-video bg-muted flex items-center justify-center">
+                  <img
+                    src={selectedImage.src}
+                    alt={selectedImage.name}
+                    className="max-w-full max-h-[70vh] object-contain"
+                  />
+                </div>
+                <div className="p-4 bg-card border-t border-border">
+                  <h3 className="font-heading text-lg text-foreground">{selectedImage.name}</h3>
+                </div>
+              </div>
+            )}
+          </DialogContent>
+        </Dialog>
       </div>
     </>
   );
