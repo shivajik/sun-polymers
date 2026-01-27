@@ -56,6 +56,7 @@ export const productCategories: ProductCategory[] = [
     heroDescription: "Stylish and durable furniture components combining aesthetics with exceptional functionality.",
     features: ["UV resistant", "Scratch resistant surfaces", "Custom colors", "Ergonomic designs"],
     applications: ["Chair components", "Table fittings", "Cabinet hardware", "Drawer slides", "Decorative trims"],
+    hasDetailedProducts: true,
   },
   {
     slug: "injection-mould",
