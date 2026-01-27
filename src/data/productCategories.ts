@@ -23,6 +23,7 @@ export interface ProductCategory {
   heroDescription: string;
   features: string[];
   applications: string[];
+  hasDetailedProducts?: boolean;
 }
 
 export const productCategories: ProductCategory[] = [
@@ -101,10 +102,11 @@ export const productCategories: ProductCategory[] = [
     name: "Construction Sector",
     shortName: "Construction",
     icon: HardHat,
-    description: "Durable plastic components for the construction and building industry.",
-    heroDescription: "Robust construction components engineered to withstand demanding environmental conditions.",
-    features: ["Weather resistant", "High load capacity", "Easy installation", "Long lifespan"],
-    applications: ["PVC fittings", "Drainage components", "Electrical conduits", "Safety equipment", "Structural spacers"],
+    description: "Durable plastic components for the construction and building industry including safety equipment and buckets.",
+    heroDescription: "Robust construction components and safety equipment engineered to withstand demanding job site conditions.",
+    features: ["Weather resistant", "High load capacity", "Safety compliant", "Durable construction", "Multiple sizes available"],
+    applications: ["PVC Shim Pads & Spacers", "Construction Buckets", "Safety Helmets", "Fall Protection Equipment", "Scaffolding Accessories", "Traffic Cones", "PVC Pipes & Chamfers"],
+    hasDetailedProducts: true,
   },
   {
     slug: "other-sector",
