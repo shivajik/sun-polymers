@@ -18,6 +18,9 @@ import tubeSleeve from "@/assets/products/furniture/tube-sleeve.jpg";
 import handleGrip from "@/assets/products/furniture/handle-grip.jpg";
 import roundEndCap from "@/assets/products/furniture/round-end-cap.jpg";
 import drawerHandle from "@/assets/products/furniture/drawer-handle.jpg";
+import squareEndCapBlack from "@/assets/products/furniture/square-end-cap-black.jpg";
+import connectorSetWhite from "@/assets/products/furniture/connector-set-white.jpg";
+import connectorSetBlack from "@/assets/products/furniture/connector-set-black.jpg";
 
 export interface FurnitureProduct {
   id: string;
@@ -146,5 +149,23 @@ export const furnitureProducts: FurnitureProduct[] = [
     name: "Drawer Handle",
     description: "Sleek drawer handle for modern furniture applications",
     image: drawerHandle,
+  },
+  {
+    id: "square-end-cap-black",
+    name: "Square End Cap (Black)",
+    description: "Heavy-duty square end cap for rectangular tube profiles",
+    image: squareEndCapBlack,
+  },
+  {
+    id: "connector-set-white",
+    name: "Connector Set (White)",
+    description: "Complete set of white connectors for modular furniture assembly",
+    image: connectorSetWhite,
+  },
+  {
+    id: "connector-set-black",
+    name: "Connector Set (Black)",
+    description: "Complete set of black connectors including corners, joints, and caps",
+    image: connectorSetBlack,
   },
 ];
