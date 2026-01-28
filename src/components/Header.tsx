@@ -1,16 +1,55 @@
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, Mail, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, Mail, ChevronDown, ArrowRight, Building2, Wrench, Package } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import { productCategories } from "@/data/productCategories";
 import logo from "@/assets/logo.png";
 
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About Us" },
-  { href: "/contact", label: "Contact" },
-];
+// Organize products into logical groups for enterprise mega menu
+const productGroups = {
+  manufacturing: {
+    title: "Manufacturing",
+    icon: Wrench,
+    items: ["injection-mould", "abs-electroplated"],
+  },
+  industrial: {
+    title: "Industrial Sectors",
+    icon: Building2,
+    items: ["automotive-sector", "electrical-sector", "construction-sector", "telecommunication-sector", "agriculture-sector"],
+  },
+  consumer: {
+    title: "Consumer Products",
+    icon: Package,
+    items: ["furniture-sector", "luggage-sector", "stationery-sector", "dispenser-pump", "mathematical-learning-blocks", "other-sector"],
+  },
+};
+
+// Get sorted products by group
+const getGroupedProducts = () => {
+  const grouped: Record<string, typeof productCategories> = {
+    manufacturing: [],
+    industrial: [],
+    consumer: [],
+  };
+
+  productCategories.forEach((product) => {
+    if (productGroups.manufacturing.items.includes(product.slug)) {
+      grouped.manufacturing.push(product);
+    } else if (productGroups.industrial.items.includes(product.slug)) {
+      grouped.industrial.push(product);
+    } else if (productGroups.consumer.items.includes(product.slug)) {
+      grouped.consumer.push(product);
+    }
+  });
+
+  // Sort each group alphabetically by shortName
+  Object.keys(grouped).forEach((key) => {
+    grouped[key].sort((a, b) => a.shortName.localeCompare(b.shortName));
+  });
+
+  return grouped;
+};
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,6 +58,7 @@ const Header = () => {
   const [isMobileProductsOpen, setIsMobileProductsOpen] = useState(false);
   const productsRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
+  const groupedProducts = getGroupedProducts();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -137,51 +177,155 @@ const Header = () => {
                 <AnimatePresence>
                   {isProductsOpen && (
                     <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
+                      initial={{ opacity: 0, y: 10, scale: 0.98 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 10, scale: 0.98 }}
                       transition={{ duration: 0.2, ease: "easeOut" }}
                       onMouseLeave={() => setIsProductsOpen(false)}
-                      className="absolute top-full left-0 mt-1 w-[420px] bg-background rounded-lg shadow-2xl border border-border z-50"
+                      className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[680px] bg-background rounded-xl shadow-2xl border border-border z-50 overflow-hidden"
                       style={{ boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)' }}
                     >
-                      {/* 2 Column Grid */}
-                      <div className="p-3 grid grid-cols-2 gap-1">
-                        {productCategories.map((product) => {
-                          const Icon = product.icon;
-                          const isCurrentProduct = location.pathname === `/products/${product.slug}`;
-                          return (
-                            <Link
-                              key={product.slug}
-                              to={`/products/${product.slug}`}
-                              className={`flex items-center gap-2.5 px-3 py-2 rounded-md transition-colors ${
-                                isCurrentProduct 
-                                  ? "bg-accent/10 text-accent" 
-                                  : "hover:bg-muted/60"
-                              }`}
-                            >
-                              <Icon className={`w-4 h-4 flex-shrink-0 ${isCurrentProduct ? "text-accent" : "text-muted-foreground"}`} />
-                              <span className={`text-sm ${
-                                isCurrentProduct 
-                                  ? "text-accent font-medium" 
-                                  : "text-foreground"
-                              }`}>
-                                {product.shortName}
-                              </span>
-                            </Link>
-                          );
-                        })}
+                      {/* Header */}
+                      <div className="bg-primary/5 border-b border-border px-6 py-4">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <h3 className="font-heading text-lg font-semibold text-foreground">Our Products</h3>
+                            <p className="text-sm text-muted-foreground">Explore our complete range of plastic solutions</p>
+                          </div>
+                          <Link 
+                            to="/products" 
+                            className="flex items-center gap-2 text-sm font-medium text-accent hover:underline"
+                          >
+                            View All
+                            <ArrowRight className="w-4 h-4" />
+                          </Link>
+                        </div>
+                      </div>
+
+                      {/* 3 Column Grid */}
+                      <div className="p-4 grid grid-cols-3 gap-4">
+                        {/* Manufacturing Column */}
+                        <div className="space-y-2">
+                          <div className="flex items-center gap-2 px-2 py-1.5 mb-1">
+                            <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center">
+                              <Wrench className="w-4 h-4 text-primary" />
+                            </div>
+                            <span className="text-xs font-semibold text-primary uppercase tracking-wide">Manufacturing</span>
+                          </div>
+                          {groupedProducts.manufacturing.map((product) => {
+                            const Icon = product.icon;
+                            const isCurrentProduct = location.pathname === `/products/${product.slug}`;
+                            return (
+                              <Link
+                                key={product.slug}
+                                to={`/products/${product.slug}`}
+                                className={`flex items-center gap-2.5 px-3 py-2.5 rounded-lg transition-all duration-200 group ${
+                                  isCurrentProduct 
+                                    ? "bg-accent text-accent-foreground shadow-sm" 
+                                    : "hover:bg-muted"
+                                }`}
+                              >
+                                <Icon className={`w-4 h-4 flex-shrink-0 ${isCurrentProduct ? "text-accent-foreground" : "text-muted-foreground group-hover:text-accent"}`} />
+                                <span className={`text-sm ${
+                                  isCurrentProduct 
+                                    ? "font-medium" 
+                                    : "text-foreground group-hover:text-accent"
+                                }`}>
+                                  {product.shortName}
+                                </span>
+                              </Link>
+                            );
+                          })}
+                        </div>
+
+                        {/* Industrial Column */}
+                        <div className="space-y-2">
+                          <div className="flex items-center gap-2 px-2 py-1.5 mb-1">
+                            <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center">
+                              <Building2 className="w-4 h-4 text-primary" />
+                            </div>
+                            <span className="text-xs font-semibold text-primary uppercase tracking-wide">Industrial</span>
+                          </div>
+                          {groupedProducts.industrial.map((product) => {
+                            const Icon = product.icon;
+                            const isCurrentProduct = location.pathname === `/products/${product.slug}`;
+                            return (
+                              <Link
+                                key={product.slug}
+                                to={`/products/${product.slug}`}
+                                className={`flex items-center gap-2.5 px-3 py-2.5 rounded-lg transition-all duration-200 group ${
+                                  isCurrentProduct 
+                                    ? "bg-accent text-accent-foreground shadow-sm" 
+                                    : "hover:bg-muted"
+                                }`}
+                              >
+                                <Icon className={`w-4 h-4 flex-shrink-0 ${isCurrentProduct ? "text-accent-foreground" : "text-muted-foreground group-hover:text-accent"}`} />
+                                <span className={`text-sm ${
+                                  isCurrentProduct 
+                                    ? "font-medium" 
+                                    : "text-foreground group-hover:text-accent"
+                                }`}>
+                                  {product.shortName}
+                                </span>
+                              </Link>
+                            );
+                          })}
+                        </div>
+
+                        {/* Consumer Column */}
+                        <div className="space-y-2">
+                          <div className="flex items-center gap-2 px-2 py-1.5 mb-1">
+                            <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center">
+                              <Package className="w-4 h-4 text-primary" />
+                            </div>
+                            <span className="text-xs font-semibold text-primary uppercase tracking-wide">Consumer</span>
+                          </div>
+                          {groupedProducts.consumer.map((product) => {
+                            const Icon = product.icon;
+                            const isCurrentProduct = location.pathname === `/products/${product.slug}`;
+                            return (
+                              <Link
+                                key={product.slug}
+                                to={`/products/${product.slug}`}
+                                className={`flex items-center gap-2.5 px-3 py-2.5 rounded-lg transition-all duration-200 group ${
+                                  isCurrentProduct 
+                                    ? "bg-accent text-accent-foreground shadow-sm" 
+                                    : "hover:bg-muted"
+                                }`}
+                              >
+                                <Icon className={`w-4 h-4 flex-shrink-0 ${isCurrentProduct ? "text-accent-foreground" : "text-muted-foreground group-hover:text-accent"}`} />
+                                <span className={`text-sm ${
+                                  isCurrentProduct 
+                                    ? "font-medium" 
+                                    : "text-foreground group-hover:text-accent"
+                                }`}>
+                                  {product.shortName}
+                                </span>
+                              </Link>
+                            );
+                          })}
+                        </div>
                       </div>
                       
-                      {/* Footer */}
-                      <div className="border-t border-border px-4 py-2.5 bg-muted/30">
-                        <Link 
-                          to="/products" 
-                          className="flex items-center justify-between text-sm font-medium text-accent hover:underline"
-                        >
-                          <span>View All Products</span>
-                          <ChevronDown className="w-4 h-4 -rotate-90" />
-                        </Link>
+                      {/* Footer CTA */}
+                      <div className="border-t border-border px-6 py-4 bg-muted/30">
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-3">
+                            <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center">
+                              <Phone className="w-5 h-5 text-accent" />
+                            </div>
+                            <div>
+                              <p className="text-sm font-medium text-foreground">Need Custom Solutions?</p>
+                              <p className="text-xs text-muted-foreground">Contact our experts for tailored products</p>
+                            </div>
+                          </div>
+                          <Button variant="accent" size="sm" asChild>
+                            <Link to="/contact">
+                              Get a Quote
+                              <ArrowRight className="w-4 h-4 ml-1" />
+                            </Link>
+                          </Button>
+                        </div>
                       </div>
                     </motion.div>
                   )}
@@ -274,32 +418,92 @@ const Header = () => {
                         exit={{ opacity: 0, height: 0 }}
                         className="overflow-hidden"
                       >
-                        <div className="pl-4 py-2 space-y-1 max-h-64 overflow-y-auto">
+                        <div className="pl-4 py-2 space-y-3 max-h-[60vh] overflow-y-auto">
                           <Link
                             to="/products"
                             onClick={() => setIsMobileMenuOpen(false)}
-                            className="block px-4 py-2 text-sm text-accent hover:bg-accent/10 rounded-lg"
+                            className="block px-4 py-2 text-sm font-medium text-accent hover:bg-accent/10 rounded-lg"
                           >
                             View All Products
                           </Link>
-                          {productCategories.map((product) => {
-                            const Icon = product.icon;
-                            return (
-                              <Link
-                                key={product.slug}
-                                to={`/products/${product.slug}`}
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className={`flex items-center gap-3 px-4 py-2 text-sm rounded-lg transition-colors ${
-                                  location.pathname === `/products/${product.slug}`
-                                    ? "text-accent bg-accent/10"
-                                    : "text-foreground/80 hover:text-accent hover:bg-accent/10"
-                                }`}
-                              >
-                                <Icon className="w-4 h-4" />
-                                {product.shortName}
-                              </Link>
-                            );
-                          })}
+                          
+                          {/* Manufacturing Group */}
+                          <div className="pt-2">
+                            <div className="flex items-center gap-2 px-4 py-1 text-xs font-semibold text-primary uppercase tracking-wide">
+                              <Wrench className="w-3.5 h-3.5" />
+                              Manufacturing
+                            </div>
+                            {groupedProducts.manufacturing.map((product) => {
+                              const Icon = product.icon;
+                              return (
+                                <Link
+                                  key={product.slug}
+                                  to={`/products/${product.slug}`}
+                                  onClick={() => setIsMobileMenuOpen(false)}
+                                  className={`flex items-center gap-3 px-4 py-2 text-sm rounded-lg transition-colors ${
+                                    location.pathname === `/products/${product.slug}`
+                                      ? "text-accent bg-accent/10"
+                                      : "text-foreground/80 hover:text-accent hover:bg-accent/10"
+                                  }`}
+                                >
+                                  <Icon className="w-4 h-4" />
+                                  {product.shortName}
+                                </Link>
+                              );
+                            })}
+                          </div>
+                          
+                          {/* Industrial Group */}
+                          <div className="pt-2 border-t border-border/50">
+                            <div className="flex items-center gap-2 px-4 py-1 text-xs font-semibold text-primary uppercase tracking-wide">
+                              <Building2 className="w-3.5 h-3.5" />
+                              Industrial
+                            </div>
+                            {groupedProducts.industrial.map((product) => {
+                              const Icon = product.icon;
+                              return (
+                                <Link
+                                  key={product.slug}
+                                  to={`/products/${product.slug}`}
+                                  onClick={() => setIsMobileMenuOpen(false)}
+                                  className={`flex items-center gap-3 px-4 py-2 text-sm rounded-lg transition-colors ${
+                                    location.pathname === `/products/${product.slug}`
+                                      ? "text-accent bg-accent/10"
+                                      : "text-foreground/80 hover:text-accent hover:bg-accent/10"
+                                  }`}
+                                >
+                                  <Icon className="w-4 h-4" />
+                                  {product.shortName}
+                                </Link>
+                              );
+                            })}
+                          </div>
+                          
+                          {/* Consumer Group */}
+                          <div className="pt-2 border-t border-border/50">
+                            <div className="flex items-center gap-2 px-4 py-1 text-xs font-semibold text-primary uppercase tracking-wide">
+                              <Package className="w-3.5 h-3.5" />
+                              Consumer
+                            </div>
+                            {groupedProducts.consumer.map((product) => {
+                              const Icon = product.icon;
+                              return (
+                                <Link
+                                  key={product.slug}
+                                  to={`/products/${product.slug}`}
+                                  onClick={() => setIsMobileMenuOpen(false)}
+                                  className={`flex items-center gap-3 px-4 py-2 text-sm rounded-lg transition-colors ${
+                                    location.pathname === `/products/${product.slug}`
+                                      ? "text-accent bg-accent/10"
+                                      : "text-foreground/80 hover:text-accent hover:bg-accent/10"
+                                  }`}
+                                >
+                                  <Icon className="w-4 h-4" />
+                                  {product.shortName}
+                                </Link>
+                              );
+                            })}
+                          </div>
                         </div>
                       </motion.div>
                     )}
