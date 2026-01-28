@@ -123,6 +123,7 @@ const Header = () => {
             ? "bg-background/95 backdrop-blur-md shadow-medium"
             : "bg-background"
         }`}
+        style={{ '--header-height': '5rem' } as React.CSSProperties}
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
@@ -182,7 +183,7 @@ const Header = () => {
                       exit={{ opacity: 0, y: 8 }}
                       transition={{ duration: 0.15, ease: "easeOut" }}
                       onMouseLeave={() => setIsProductsOpen(false)}
-                      className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[720px] bg-background rounded-2xl border border-border/60 z-50 overflow-hidden"
+                      className="fixed top-[calc(var(--header-height,5rem)+0.75rem)] left-1/2 -translate-x-1/2 w-[720px] max-w-[calc(100vw-2rem)] bg-background rounded-2xl border border-border/60 z-50 overflow-hidden"
                       style={{ 
                         boxShadow: '0 20px 40px -8px rgba(0, 0, 0, 0.15), 0 8px 16px -4px rgba(0, 0, 0, 0.1)' 
                       }}
