@@ -177,154 +177,174 @@ const Header = () => {
                 <AnimatePresence>
                   {isProductsOpen && (
                     <motion.div
-                      initial={{ opacity: 0, y: 10, scale: 0.98 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{ opacity: 0, y: 10, scale: 0.98 }}
-                      transition={{ duration: 0.2, ease: "easeOut" }}
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 8 }}
+                      transition={{ duration: 0.15, ease: "easeOut" }}
                       onMouseLeave={() => setIsProductsOpen(false)}
-                      className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[680px] bg-background rounded-xl shadow-2xl border border-border z-50 overflow-hidden"
-                      style={{ boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)' }}
+                      className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[720px] bg-background rounded-2xl border border-border/60 z-50 overflow-hidden"
+                      style={{ 
+                        boxShadow: '0 20px 40px -8px rgba(0, 0, 0, 0.15), 0 8px 16px -4px rgba(0, 0, 0, 0.1)' 
+                      }}
                     >
-                      {/* Header */}
-                      <div className="bg-primary/5 border-b border-border px-6 py-4">
-                        <div className="flex items-center justify-between">
+                      {/* Content Grid */}
+                      <div className="p-6">
+                        <div className="grid grid-cols-3 gap-8">
+                          {/* Manufacturing Column */}
                           <div>
-                            <h3 className="font-heading text-lg font-semibold text-foreground">Our Products</h3>
-                            <p className="text-sm text-muted-foreground">Explore our complete range of plastic solutions</p>
-                          </div>
-                          <Link 
-                            to="/products" 
-                            className="flex items-center gap-2 text-sm font-medium text-accent hover:underline"
-                          >
-                            View All
-                            <ArrowRight className="w-4 h-4" />
-                          </Link>
-                        </div>
-                      </div>
-
-                      {/* 3 Column Grid */}
-                      <div className="p-4 grid grid-cols-3 gap-4">
-                        {/* Manufacturing Column */}
-                        <div className="space-y-2">
-                          <div className="flex items-center gap-2 px-2 py-1.5 mb-1">
-                            <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center">
-                              <Wrench className="w-4 h-4 text-primary" />
+                            <div className="flex items-center gap-2.5 mb-4 pb-3 border-b border-border/60">
+                              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center shadow-sm">
+                                <Wrench className="w-4 h-4 text-primary-foreground" />
+                              </div>
+                              <div>
+                                <h4 className="text-sm font-semibold text-foreground">Manufacturing</h4>
+                                <p className="text-[10px] text-muted-foreground">Moulds & Processing</p>
+                              </div>
                             </div>
-                            <span className="text-xs font-semibold text-primary uppercase tracking-wide">Manufacturing</span>
-                          </div>
-                          {groupedProducts.manufacturing.map((product) => {
-                            const Icon = product.icon;
-                            const isCurrentProduct = location.pathname === `/products/${product.slug}`;
-                            return (
-                              <Link
-                                key={product.slug}
-                                to={`/products/${product.slug}`}
-                                className={`flex items-center gap-2.5 px-3 py-2.5 rounded-lg transition-all duration-200 group ${
-                                  isCurrentProduct 
-                                    ? "bg-accent text-accent-foreground shadow-sm" 
-                                    : "hover:bg-muted"
-                                }`}
-                              >
-                                <Icon className={`w-4 h-4 flex-shrink-0 ${isCurrentProduct ? "text-accent-foreground" : "text-muted-foreground group-hover:text-accent"}`} />
-                                <span className={`text-sm ${
-                                  isCurrentProduct 
-                                    ? "font-medium" 
-                                    : "text-foreground group-hover:text-accent"
-                                }`}>
-                                  {product.shortName}
-                                </span>
-                              </Link>
-                            );
-                          })}
-                        </div>
-
-                        {/* Industrial Column */}
-                        <div className="space-y-2">
-                          <div className="flex items-center gap-2 px-2 py-1.5 mb-1">
-                            <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center">
-                              <Building2 className="w-4 h-4 text-primary" />
+                            <div className="space-y-0.5">
+                              {groupedProducts.manufacturing.map((product) => {
+                                const Icon = product.icon;
+                                const isCurrentProduct = location.pathname === `/products/${product.slug}`;
+                                return (
+                                  <Link
+                                    key={product.slug}
+                                    to={`/products/${product.slug}`}
+                                    className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-150 group ${
+                                      isCurrentProduct 
+                                        ? "bg-primary text-primary-foreground" 
+                                        : "hover:bg-muted/80"
+                                    }`}
+                                  >
+                                    <div className={`w-8 h-8 rounded-md flex items-center justify-center transition-colors ${
+                                      isCurrentProduct 
+                                        ? "bg-primary-foreground/20" 
+                                        : "bg-muted group-hover:bg-accent/10"
+                                    }`}>
+                                      <Icon className={`w-4 h-4 ${isCurrentProduct ? "text-primary-foreground" : "text-muted-foreground group-hover:text-accent"}`} />
+                                    </div>
+                                    <span className={`text-sm ${
+                                      isCurrentProduct 
+                                        ? "font-medium" 
+                                        : "text-foreground/90 group-hover:text-foreground"
+                                    }`}>
+                                      {product.shortName}
+                                    </span>
+                                  </Link>
+                                );
+                              })}
                             </div>
-                            <span className="text-xs font-semibold text-primary uppercase tracking-wide">Industrial</span>
                           </div>
-                          {groupedProducts.industrial.map((product) => {
-                            const Icon = product.icon;
-                            const isCurrentProduct = location.pathname === `/products/${product.slug}`;
-                            return (
-                              <Link
-                                key={product.slug}
-                                to={`/products/${product.slug}`}
-                                className={`flex items-center gap-2.5 px-3 py-2.5 rounded-lg transition-all duration-200 group ${
-                                  isCurrentProduct 
-                                    ? "bg-accent text-accent-foreground shadow-sm" 
-                                    : "hover:bg-muted"
-                                }`}
-                              >
-                                <Icon className={`w-4 h-4 flex-shrink-0 ${isCurrentProduct ? "text-accent-foreground" : "text-muted-foreground group-hover:text-accent"}`} />
-                                <span className={`text-sm ${
-                                  isCurrentProduct 
-                                    ? "font-medium" 
-                                    : "text-foreground group-hover:text-accent"
-                                }`}>
-                                  {product.shortName}
-                                </span>
-                              </Link>
-                            );
-                          })}
-                        </div>
 
-                        {/* Consumer Column */}
-                        <div className="space-y-2">
-                          <div className="flex items-center gap-2 px-2 py-1.5 mb-1">
-                            <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center">
-                              <Package className="w-4 h-4 text-primary" />
+                          {/* Industrial Column */}
+                          <div>
+                            <div className="flex items-center gap-2.5 mb-4 pb-3 border-b border-border/60">
+                              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center shadow-sm">
+                                <Building2 className="w-4 h-4 text-primary-foreground" />
+                              </div>
+                              <div>
+                                <h4 className="text-sm font-semibold text-foreground">Industrial</h4>
+                                <p className="text-[10px] text-muted-foreground">B2B Solutions</p>
+                              </div>
                             </div>
-                            <span className="text-xs font-semibold text-primary uppercase tracking-wide">Consumer</span>
+                            <div className="space-y-0.5">
+                              {groupedProducts.industrial.map((product) => {
+                                const Icon = product.icon;
+                                const isCurrentProduct = location.pathname === `/products/${product.slug}`;
+                                return (
+                                  <Link
+                                    key={product.slug}
+                                    to={`/products/${product.slug}`}
+                                    className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-150 group ${
+                                      isCurrentProduct 
+                                        ? "bg-primary text-primary-foreground" 
+                                        : "hover:bg-muted/80"
+                                    }`}
+                                  >
+                                    <div className={`w-8 h-8 rounded-md flex items-center justify-center transition-colors ${
+                                      isCurrentProduct 
+                                        ? "bg-primary-foreground/20" 
+                                        : "bg-muted group-hover:bg-accent/10"
+                                    }`}>
+                                      <Icon className={`w-4 h-4 ${isCurrentProduct ? "text-primary-foreground" : "text-muted-foreground group-hover:text-accent"}`} />
+                                    </div>
+                                    <span className={`text-sm ${
+                                      isCurrentProduct 
+                                        ? "font-medium" 
+                                        : "text-foreground/90 group-hover:text-foreground"
+                                    }`}>
+                                      {product.shortName}
+                                    </span>
+                                  </Link>
+                                );
+                              })}
+                            </div>
                           </div>
-                          {groupedProducts.consumer.map((product) => {
-                            const Icon = product.icon;
-                            const isCurrentProduct = location.pathname === `/products/${product.slug}`;
-                            return (
-                              <Link
-                                key={product.slug}
-                                to={`/products/${product.slug}`}
-                                className={`flex items-center gap-2.5 px-3 py-2.5 rounded-lg transition-all duration-200 group ${
-                                  isCurrentProduct 
-                                    ? "bg-accent text-accent-foreground shadow-sm" 
-                                    : "hover:bg-muted"
-                                }`}
-                              >
-                                <Icon className={`w-4 h-4 flex-shrink-0 ${isCurrentProduct ? "text-accent-foreground" : "text-muted-foreground group-hover:text-accent"}`} />
-                                <span className={`text-sm ${
-                                  isCurrentProduct 
-                                    ? "font-medium" 
-                                    : "text-foreground group-hover:text-accent"
-                                }`}>
-                                  {product.shortName}
-                                </span>
-                              </Link>
-                            );
-                          })}
+
+                          {/* Consumer Column */}
+                          <div>
+                            <div className="flex items-center gap-2.5 mb-4 pb-3 border-b border-border/60">
+                              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center shadow-sm">
+                                <Package className="w-4 h-4 text-primary-foreground" />
+                              </div>
+                              <div>
+                                <h4 className="text-sm font-semibold text-foreground">Consumer</h4>
+                                <p className="text-[10px] text-muted-foreground">End Products</p>
+                              </div>
+                            </div>
+                            <div className="space-y-0.5">
+                              {groupedProducts.consumer.map((product) => {
+                                const Icon = product.icon;
+                                const isCurrentProduct = location.pathname === `/products/${product.slug}`;
+                                return (
+                                  <Link
+                                    key={product.slug}
+                                    to={`/products/${product.slug}`}
+                                    className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-150 group ${
+                                      isCurrentProduct 
+                                        ? "bg-primary text-primary-foreground" 
+                                        : "hover:bg-muted/80"
+                                    }`}
+                                  >
+                                    <div className={`w-8 h-8 rounded-md flex items-center justify-center transition-colors ${
+                                      isCurrentProduct 
+                                        ? "bg-primary-foreground/20" 
+                                        : "bg-muted group-hover:bg-accent/10"
+                                    }`}>
+                                      <Icon className={`w-4 h-4 ${isCurrentProduct ? "text-primary-foreground" : "text-muted-foreground group-hover:text-accent"}`} />
+                                    </div>
+                                    <span className={`text-sm ${
+                                      isCurrentProduct 
+                                        ? "font-medium" 
+                                        : "text-foreground/90 group-hover:text-foreground"
+                                    }`}>
+                                      {product.shortName}
+                                    </span>
+                                  </Link>
+                                );
+                              })}
+                            </div>
+                          </div>
                         </div>
                       </div>
                       
-                      {/* Footer CTA */}
-                      <div className="border-t border-border px-6 py-4 bg-muted/30">
+                      {/* Footer */}
+                      <div className="border-t border-border/60 bg-muted/40 px-6 py-4">
                         <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-3">
-                            <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center">
-                              <Phone className="w-5 h-5 text-accent" />
-                            </div>
-                            <div>
-                              <p className="text-sm font-medium text-foreground">Need Custom Solutions?</p>
-                              <p className="text-xs text-muted-foreground">Contact our experts for tailored products</p>
-                            </div>
+                          <Link 
+                            to="/products" 
+                            className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-accent transition-colors"
+                          >
+                            <span>Browse All 13 Product Categories</span>
+                            <ArrowRight className="w-4 h-4" />
+                          </Link>
+                          <div className="flex items-center gap-4">
+                            <span className="text-xs text-muted-foreground">ISO 9001:2015 Certified</span>
+                            <Button variant="accent" size="sm" asChild className="shadow-sm">
+                              <Link to="/contact">
+                                Request Quote
+                              </Link>
+                            </Button>
                           </div>
-                          <Button variant="accent" size="sm" asChild>
-                            <Link to="/contact">
-                              Get a Quote
-                              <ArrowRight className="w-4 h-4 ml-1" />
-                            </Link>
-                          </Button>
                         </div>
                       </div>
                     </motion.div>
