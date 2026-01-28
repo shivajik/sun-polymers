@@ -122,6 +122,7 @@ export const productCategories: ProductCategory[] = [
     heroDescription: "Versatile custom solutions for unique applications across diverse industries.",
     features: ["Custom designs", "Flexible materials", "Specialized compounds", "Tailored solutions"],
     applications: ["Medical devices", "Packaging components", "Industrial parts", "Consumer goods", "Specialty items"],
+    hasDetailedProducts: true,
   },
   {
     slug: "stationery-sector",
