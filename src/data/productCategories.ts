@@ -47,6 +47,7 @@ export const productCategories: ProductCategory[] = [
     heroDescription: "Superior electrical insulation components designed for safety, durability, and optimal performance.",
     features: ["Excellent insulation", "Flame retardant options", "High dielectric strength", "UL certified materials"],
     applications: ["Switch housings", "Junction boxes", "Cable clips", "Terminal blocks", "Electrical enclosures"],
+    hasDetailedProducts: true,
   },
   {
     slug: "furniture-sector",
