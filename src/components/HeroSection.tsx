@@ -5,7 +5,7 @@ import heroImage from "@/assets/hero-manufacturing.jpg";
 import { Link } from "react-router-dom";
 
 const stats = [
-  { icon: Factory, value: "34+", label: "Years Experience" },
+  { icon: Factory, value: "28+", label: "Years Experience" },
   { icon: Award, value: "ISO", label: "9001:2015 Certified" },
   { icon: Users, value: "100+", label: "Clients Served" },
 ];
@@ -58,9 +58,9 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl leading-relaxed drop-shadow-md"
           >
-            Manufacturing customised industrial & domestic plastic products with world-class 
-            quality. Serving Appliances, Electronics, Agriculture, Sports, and more with 
-            ISO 9001:2015 certified excellence.
+            With over 28 years of experience, we manufacture customised industrial & domestic 
+            plastic products, assemblies and moulds for Appliances, Luggage, Stationery, 
+            Electrical & Electronics, Telecommunication, Agriculture, and Sports sectors.
           </motion.p>
 
           <motion.div
