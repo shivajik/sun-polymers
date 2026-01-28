@@ -80,6 +80,7 @@ export const productCategories: ProductCategory[] = [
     heroDescription: "Safe, colorful, and educational learning tools designed to make mathematics fun and engaging.",
     features: ["Child-safe materials", "Vibrant colors", "Durable construction", "Educational designs"],
     applications: ["Counting blocks", "Geometric shapes", "Number cubes", "Pattern blocks", "Math manipulatives"],
+    hasDetailedProducts: true,
   },
   {
     slug: "telecommunication-sector",
