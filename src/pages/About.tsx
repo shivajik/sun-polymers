@@ -12,7 +12,7 @@ const About = () => {
     url: "https://sunpolymers.in",
     logo: "https://sunpolymers.in/og-image.jpg",
     foundingDate: "1990",
-    description: "ISO 9001:2015 certified plastic injection moulding manufacturer with 34+ years of excellence",
+    description: "ISO 9001:2015 certified plastic injection moulding manufacturer with 28+ years of excellence",
     address: {
       "@type": "PostalAddress",
       streetAddress: "MIDC Industrial Area",
@@ -62,10 +62,10 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>About Us | Sun Polymers - 34+ Years of Excellence in Plastic Moulding</title>
+        <title>About Us | Sun Polymers - 28+ Years of Excellence in Plastic Moulding</title>
         <meta
           name="description"
-          content="Learn about Sun Polymers' 34+ years journey as a pioneer in plastic injection moulding. ISO 9001:2015 certified manufacturer based in Jalna, Maharashtra."
+          content="Learn about Sun Polymers' 28+ years journey as a pioneer in plastic injection moulding. ISO 9001:2015 certified manufacturer based in Jalna, Maharashtra."
         />
         <meta
           name="keywords"
@@ -81,10 +81,10 @@ const About = () => {
         
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://sunpolymers.in/about" />
-        <meta property="og:title" content="About Sun Polymers | 34+ Years of Manufacturing Excellence" />
+        <meta property="og:title" content="About Sun Polymers | 28+ Years of Manufacturing Excellence" />
         <meta
           property="og:description"
-          content="Discover our journey from 1990 to becoming a leading plastic injection moulding manufacturer in India."
+          content="Discover our journey from 1990 to becoming a leading plastic injection moulding manufacturer in India with 28+ years of experience."
         />
         <meta property="og:image" content="https://sunpolymers.in/og-image.jpg" />
 

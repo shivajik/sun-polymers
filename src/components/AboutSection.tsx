@@ -6,18 +6,18 @@ import { CheckCircle, Target, Lightbulb, Shield } from "lucide-react";
 const values = [
   {
     icon: Target,
-    title: "Precision Engineering",
-    description: "High-precision plastic injection moulding with tight tolerances",
+    title: "One Stop Solution",
+    description: "From product design to supply of finished products and assemblies",
   },
   {
     icon: Lightbulb,
-    title: "Innovation",
-    description: "Continuous improvement in design and manufacturing processes",
+    title: "Continuous Innovation",
+    description: "Introducing highly technical & import substitute products of international quality",
   },
   {
     icon: Shield,
-    title: "Quality Assurance",
-    description: "ISO 9001:2015 certified quality management systems",
+    title: "ISO 9001:2015 Certified",
+    description: "Environmental friendly practices with constant upgrading and training at all levels",
   },
 ];
 
@@ -58,15 +58,16 @@ const AboutSection = () => {
             
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
               Established in 1990, Sun Polymers has been a pioneer in manufacturing customised 
-              industrial and domestic plastic products. With over three decades of experience, 
-              we specialize in injection moulding of high-precision plastics products, assemblies, 
-              and moulds.
+              industrial and domestic products, injection moulding of high precision plastics products, 
+              assemblies and moulds for Appliances, Luggage, Stationery, Electrical & Electronics, 
+              Telecommunication, Agriculture, Sports sector and other ancillary sectors.
             </p>
             
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              Our commitment to establishing the highest industry standards for quality, product 
-              development, service, and technology through continuous improvement and teamwork has 
-              made us a trusted name in the industry.
+              With over 28 years of experience in design for manufacturability and production, 
+              we are supported by excellent infrastructure and highly experienced technical workforce 
+              to undertake jobs of highly complex nature. We are committed to establishing the highest 
+              industry standards through continuous improvement and teamwork.
             </p>
 
             {/* Highlights Grid */}
@@ -122,7 +123,7 @@ const AboutSection = () => {
               transition={{ duration: 0.5, delay: 0.6 }}
               className="bg-primary rounded-2xl p-8 text-center"
             >
-              <div className="font-heading font-bold text-5xl text-accent mb-2">34+</div>
+              <div className="font-heading font-bold text-5xl text-accent mb-2">28+</div>
               <div className="text-primary-foreground text-lg">Years of Excellence</div>
               <div className="text-primary-foreground/70 text-sm mt-1">Since 1990</div>
             </motion.div>

@@ -28,7 +28,7 @@ const achievements = [
 
 const stats = [
   { value: "1990", label: "Established" },
-  { value: "34+", label: "Years Experience" },
+  { value: "28+", label: "Years Experience" },
   { value: "100+", label: "Happy Clients" },
   { value: "1000+", label: "Products Delivered" },
 ];
@@ -54,7 +54,7 @@ const AchievementsSection = () => {
             A Legacy of <span className="text-accent">Excellence</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Over three decades of commitment to quality, innovation, and customer satisfaction.
+            Over 28 years of commitment to quality, innovation, and customer satisfaction.
           </p>
         </motion.div>
 
