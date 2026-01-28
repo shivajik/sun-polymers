@@ -8,6 +8,7 @@ import injectionMould2 from "@/assets/products/electrical/injection-mould-2.jpg"
 import diffuser from "@/assets/products/electrical/diffuser.jpg";
 import mcbBoxHousing from "@/assets/products/electrical/mcb-box-housing.jpg";
 import nylonConnectors from "@/assets/products/electrical/nylon-connectors.jpg";
+import variousPlasticParts from "@/assets/products/electrical/various-plastic-parts.jpg";
 
 export interface ElectricalProduct {
   id: string;
@@ -76,5 +77,11 @@ export const electricalProducts: ElectricalProduct[] = [
     name: "Nylon 66 Connectors",
     description: "High-temperature resistant Nylon 66 connector blocks for electrical wiring.",
     image: nylonConnectors,
+  },
+  {
+    id: "various-plastic-parts",
+    name: "Various Plastic Components",
+    description: "Custom molded plastic parts including fan blades, covers, and housings for electrical appliances.",
+    image: variousPlasticParts,
   },
 ];
