@@ -23,6 +23,7 @@ import { mouldProducts } from "@/data/mouldProducts";
 import { luggageProducts } from "@/data/luggageProducts";
 import { learningBlocksProducts } from "@/data/learningBlocksProducts";
 import { otherProducts } from "@/data/otherProducts";
+import { stationeryProducts } from "@/data/stationeryProducts";
 
 const ProductCategory = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -596,6 +597,52 @@ const ProductCategory = () => {
                   
                   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {otherProducts.map((item, index) => (
+                      <motion.div
+                        key={item.id}
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                        transition={{ duration: 0.4, delay: 0.05 * index }}
+                        className="group bg-card rounded-xl overflow-hidden shadow-card hover:shadow-medium transition-all duration-300 border border-border/50 hover:border-accent/30 cursor-pointer"
+                        onClick={() => setSelectedImage({ src: item.image, name: item.name })}
+                      >
+                        <div className="aspect-square overflow-hidden bg-white flex items-center justify-center p-2">
+                          <img
+                            src={item.image}
+                            alt={item.name}
+                            className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                          />
+                        </div>
+                        <div className="p-4">
+                          <h3 className="font-semibold text-foreground text-sm mb-1 line-clamp-2">
+                            {item.name}
+                          </h3>
+                          <p className="text-xs text-muted-foreground line-clamp-2">
+                            {item.description}
+                          </p>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+
+              {/* Product Gallery for Stationery */}
+              {product.hasDetailedProducts && slug === "stationery-sector" && (
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="mt-16"
+                >
+                  <span className="inline-block px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-semibold mb-6">
+                    Our Products
+                  </span>
+                  <h2 className="font-heading text-3xl md:text-4xl text-foreground mb-8">
+                    <span className="text-accent">Stationery</span> Product Range
+                  </h2>
+                  
+                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    {stationeryProducts.map((item, index) => (
                       <motion.div
                         key={item.id}
                         initial={{ opacity: 0, scale: 0.9 }}

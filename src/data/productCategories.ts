@@ -133,6 +133,7 @@ export const productCategories: ProductCategory[] = [
     heroDescription: "Innovative stationery products designed for everyday office and educational use.",
     features: ["Ergonomic design", "Vibrant colors", "Durable materials", "Functional designs"],
     applications: ["Pen holders", "File organizers", "Desk accessories", "Storage boxes", "Clip systems"],
+    hasDetailedProducts: true,
   },
   {
     slug: "agriculture-sector",
