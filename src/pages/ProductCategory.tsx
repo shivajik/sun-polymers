@@ -48,6 +48,50 @@ const ProductCategory = () => {
     .filter((p) => p.slug !== slug)
     .slice(0, 4);
 
+  // Structured data schemas
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://sunpolymers.in/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Products",
+        item: "https://sunpolymers.in/products",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: product.name,
+        item: `https://sunpolymers.in/products/${product.slug}`,
+      },
+    ],
+  };
+
+  const productServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.name,
+    description: product.heroDescription,
+    brand: {
+      "@type": "Brand",
+      name: "Sun Polymers",
+    },
+    manufacturer: {
+      "@type": "Organization",
+      name: "Sun Polymers",
+      url: "https://sunpolymers.in",
+    },
+    category: "Plastic Injection Moulding",
+    url: `https://sunpolymers.in/products/${product.slug}`,
+  };
+
   return (
     <>
       <Helmet>
@@ -62,10 +106,20 @@ const ProductCategory = () => {
         />
         <link rel="canonical" href={`https://sunpolymers.in/products/${product.slug}`} />
         
+        {/* GEO Tags for Local SEO */}
+        <meta name="geo.region" content="IN-MH" />
+        <meta name="geo.placename" content="Jalna" />
+        <meta name="geo.position" content="19.8347;75.8816" />
+        <meta name="ICBM" content="19.8347, 75.8816" />
+        
         <meta property="og:type" content="product" />
         <meta property="og:url" content={`https://sunpolymers.in/products/${product.slug}`} />
         <meta property="og:title" content={`${product.name} | Sun Polymers`} />
         <meta property="og:description" content={product.description} />
+        <meta property="og:image" content="https://sunpolymers.in/og-image.jpg" />
+
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(productServiceSchema)}</script>
       </Helmet>
 
       <div className="min-h-screen bg-background">
