@@ -100,7 +100,21 @@ const Footer = () => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60">
             <p>© {currentYear} Sun Polymers. All rights reserved.</p>
-            <p>An ISO 9001:2015 Certified Company</p>
+            <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+              <p>An ISO 9001:2015 Certified Company</p>
+              <span className="hidden md:inline">•</span>
+              <p>
+                Designed by{" "}
+                <a 
+                  href="https://ksoftsolution.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-accent hover:underline transition-colors"
+                >
+                  KSoft Solution
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </div>
