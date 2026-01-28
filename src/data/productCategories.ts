@@ -36,6 +36,7 @@ export const productCategories: ProductCategory[] = [
     heroDescription: "Precision-engineered automotive plastic components meeting stringent quality standards for the modern automobile industry.",
     features: ["Impact resistant materials", "Heat-stable compounds", "Precision tolerance parts", "Multi-component assemblies"],
     applications: ["Dashboard components", "Interior trim parts", "Engine covers", "Electrical housings", "Mirror casings"],
+    hasDetailedProducts: true,
   },
   {
     slug: "electrical-sector",
