@@ -152,6 +152,7 @@ export const productCategories: ProductCategory[] = [
     heroDescription: "Premium luggage components combining style, durability, and functionality for modern travelers.",
     features: ["Impact resistant", "Lightweight", "Secure fittings", "Stylish designs"],
     applications: ["Suitcase shells", "Handle systems", "Wheel assemblies", "Lock housings", "Corner protectors"],
+    hasDetailedProducts: true,
   },
   {
     slug: "dispenser-pump",
