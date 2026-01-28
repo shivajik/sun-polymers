@@ -139,6 +139,7 @@ export const productCategories: ProductCategory[] = [
     heroDescription: "Durable agricultural components designed to withstand harsh outdoor conditions.",
     features: ["UV stabilized", "Chemical resistant", "Impact resistant", "Weather proof"],
     applications: ["Irrigation fittings", "Sprayer parts", "Seed trays", "Greenhouse components", "Farm equipment parts"],
+    hasDetailedProducts: true,
   },
   {
     slug: "luggage-sector",
