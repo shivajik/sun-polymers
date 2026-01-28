@@ -8,6 +8,11 @@ import elbowConnector from "@/assets/products/agriculture/elbow-connector.jpg";
 import jTypeDripper from "@/assets/products/agriculture/j-type-dripper.jpg";
 import plassimCoupling from "@/assets/products/agriculture/plassim-coupling.jpg";
 import pvcSocket from "@/assets/products/agriculture/pvc-socket.jpg";
+import straightConnector from "@/assets/products/agriculture/straight-connector.jpg";
+import traveliteFilter from "@/assets/products/agriculture/travelite-filter.jpg";
+import turboDripper from "@/assets/products/agriculture/turbo-dripper.jpg";
+import unionBallValve from "@/assets/products/agriculture/union-ball-valve.jpg";
+import inlineValve from "@/assets/products/agriculture/inline-valve.jpg";
 
 export interface AgricultureProduct {
   id: string;
@@ -76,5 +81,35 @@ export const agricultureProducts: AgricultureProduct[] = [
     name: "PVC Socket",
     description: "PVC socket fitting for seamless pipe-to-pipe connections.",
     image: pvcSocket,
+  },
+  {
+    id: "straight-connector",
+    name: "Straight Connector",
+    description: "Barbed straight connector for inline drip tubing extensions.",
+    image: straightConnector,
+  },
+  {
+    id: "travelite-filter",
+    name: "Travelite Filter",
+    description: "Y-type inline filter for removing sediments from irrigation water.",
+    image: traveliteFilter,
+  },
+  {
+    id: "turbo-dripper",
+    name: "Turbo Dripper",
+    description: "High-performance pressure-compensating dripper for consistent water delivery.",
+    image: turboDripper,
+  },
+  {
+    id: "union-ball-valve",
+    name: "Union Ball Valve",
+    description: "PVC union ball valve for easy installation and maintenance in pipelines.",
+    image: unionBallValve,
+  },
+  {
+    id: "inline-valve",
+    name: "Inline Valve",
+    description: "Compact inline valve set for controlling water flow in drip irrigation lines.",
+    image: inlineValve,
   },
 ];
