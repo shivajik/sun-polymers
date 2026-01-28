@@ -69,6 +69,7 @@ export const productCategories: ProductCategory[] = [
     heroDescription: "Expert mould design and manufacturing services for optimal production efficiency and product quality.",
     features: ["CAD/CAM design", "Rapid prototyping", "Multi-cavity moulds", "Hot runner systems"],
     applications: ["Production moulds", "Prototype tooling", "Insert moulds", "Overmoulding tools", "Family moulds"],
+    hasDetailedProducts: true,
   },
   {
     slug: "mathematical-learning-blocks",
