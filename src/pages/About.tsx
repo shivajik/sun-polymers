@@ -5,6 +5,60 @@ import AboutSection from "@/components/AboutSection";
 import AchievementsSection from "@/components/AchievementsSection";
 
 const About = () => {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Sun Polymers",
+    url: "https://sunpolymers.in",
+    logo: "https://sunpolymers.in/og-image.jpg",
+    foundingDate: "1990",
+    description: "ISO 9001:2015 certified plastic injection moulding manufacturer with 34+ years of excellence",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "MIDC Industrial Area",
+      addressLocality: "Jalna",
+      addressRegion: "Maharashtra",
+      postalCode: "431203",
+      addressCountry: "IN",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "19.8347",
+      longitude: "75.8816",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+91-2482-230335",
+      contactType: "sales",
+      email: "sales@sunpolymers.in",
+    },
+    sameAs: [],
+    hasCredential: {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "certification",
+      name: "ISO 9001:2015",
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://sunpolymers.in/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "About Us",
+        item: "https://sunpolymers.in/about",
+      },
+    ],
+  };
+
   return (
     <>
       <Helmet>
@@ -19,6 +73,12 @@ const About = () => {
         />
         <link rel="canonical" href="https://sunpolymers.in/about" />
         
+        {/* GEO Tags for Local SEO */}
+        <meta name="geo.region" content="IN-MH" />
+        <meta name="geo.placename" content="Jalna" />
+        <meta name="geo.position" content="19.8347;75.8816" />
+        <meta name="ICBM" content="19.8347, 75.8816" />
+        
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://sunpolymers.in/about" />
         <meta property="og:title" content="About Sun Polymers | 34+ Years of Manufacturing Excellence" />
@@ -26,6 +86,10 @@ const About = () => {
           property="og:description"
           content="Discover our journey from 1990 to becoming a leading plastic injection moulding manufacturer in India."
         />
+        <meta property="og:image" content="https://sunpolymers.in/og-image.jpg" />
+
+        <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       <div className="min-h-screen bg-background">
