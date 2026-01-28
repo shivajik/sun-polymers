@@ -160,6 +160,7 @@ export const productCategories: ProductCategory[] = [
     heroDescription: "High-quality dispenser pumps designed for consistent, reliable dispensing performance.",
     features: ["Precise dosing", "Leak-proof design", "Chemical resistant", "Smooth operation"],
     applications: ["Cosmetic dispensers", "Soap pumps", "Lotion pumps", "Sanitizer dispensers", "Industrial dispensers"],
+    hasDetailedProducts: true,
   },
 ];
 
