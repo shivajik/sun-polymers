@@ -28,7 +28,7 @@ const About = () => {
     },
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+91-2482-230335",
+      telephone: "+91-98220-07676",
       contactType: "sales",
       email: "sales@sunpolymers.in",
     },

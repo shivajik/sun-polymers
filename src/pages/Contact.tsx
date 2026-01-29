@@ -12,7 +12,7 @@ const Contact = () => {
     mainEntity: {
       "@type": "Organization",
       name: "Sun Polymers",
-      telephone: "+91-2482-230335",
+      telephone: "+91-98220-07676",
       email: "sales@sunpolymers.in",
       address: {
         "@type": "PostalAddress",
@@ -49,7 +49,7 @@ const Contact = () => {
         <title>Contact Us | Sun Polymers - Get a Quote for Plastic Moulding</title>
         <meta
           name="description"
-          content="Contact Sun Polymers for custom plastic injection moulding quotes. Located in Jalna, Maharashtra. Call +91-2482-230335 or email sales@sunpolymers.in"
+          content="Contact Sun Polymers for custom plastic injection moulding quotes. Located in Jalna, Maharashtra. Call +91 98220 07676 or email sales@sunpolymers.in"
         />
         <meta
           name="keywords"
