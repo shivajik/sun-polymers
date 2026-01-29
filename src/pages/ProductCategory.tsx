@@ -783,9 +783,6 @@ const ProductCategory = () => {
                     className="max-w-full max-h-[70vh] object-contain"
                   />
                 </div>
-                <div className="p-4 bg-card border-t border-border">
-                  <h3 className="font-heading text-lg text-foreground">{selectedImage.name}</h3>
-                </div>
               </div>
             )}
           </DialogContent>
