@@ -191,19 +191,19 @@ const Header = () => {
                       {/* Content Grid */}
                       <div className="p-6">
                         <div className="grid grid-cols-3 gap-8">
-                          {/* Manufacturing Column */}
+                          {/* Consumer Column */}
                           <div>
                             <div className="flex items-center gap-2.5 mb-4 pb-3 border-b border-border/60">
                               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center shadow-sm">
-                                <Wrench className="w-4 h-4 text-primary-foreground" />
+                                <Package className="w-4 h-4 text-primary-foreground" />
                               </div>
                               <div>
-                                <h4 className="text-sm font-semibold text-foreground">Manufacturing</h4>
-                                <p className="text-[10px] text-muted-foreground">Moulds & Processing</p>
+                                <h4 className="text-sm font-semibold text-foreground">Consumer</h4>
+                                <p className="text-[10px] text-muted-foreground">End Products</p>
                               </div>
                             </div>
                             <div className="space-y-0.5">
-                              {groupedProducts.manufacturing.map((product) => {
+                              {groupedProducts.consumer.map((product) => {
                                 const Icon = product.icon;
                                 const isCurrentProduct = location.pathname === `/products/${product.slug}`;
                                 return (
@@ -281,19 +281,19 @@ const Header = () => {
                             </div>
                           </div>
 
-                          {/* Consumer Column */}
+                          {/* Manufacturing Column */}
                           <div>
                             <div className="flex items-center gap-2.5 mb-4 pb-3 border-b border-border/60">
                               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center shadow-sm">
-                                <Package className="w-4 h-4 text-primary-foreground" />
+                                <Wrench className="w-4 h-4 text-primary-foreground" />
                               </div>
                               <div>
-                                <h4 className="text-sm font-semibold text-foreground">Consumer</h4>
-                                <p className="text-[10px] text-muted-foreground">End Products</p>
+                                <h4 className="text-sm font-semibold text-foreground">Manufacturing</h4>
+                                <p className="text-[10px] text-muted-foreground">Moulds & Processing</p>
                               </div>
                             </div>
                             <div className="space-y-0.5">
-                              {groupedProducts.consumer.map((product) => {
+                              {groupedProducts.manufacturing.map((product) => {
                                 const Icon = product.icon;
                                 const isCurrentProduct = location.pathname === `/products/${product.slug}`;
                                 return (
