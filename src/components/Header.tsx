@@ -21,7 +21,7 @@ const productGroups = {
   consumer: {
     title: "Consumer Products",
     icon: Package,
-    items: ["furniture-sector", "luggage-sector", "stationery-sector", "dispenser-pump", "mathematical-learning-blocks", "other-sector"],
+    items: ["furniture-sector", "luggage-sector", "stationery-sector", "dispenser-pump", "caps-closures", "mathematical-learning-blocks", "other-sector"],
   },
 };
 
@@ -335,7 +335,7 @@ const Header = () => {
                             to="/products" 
                             className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-accent transition-colors"
                           >
-                            <span>Browse All 13 Product Categories</span>
+                            <span>Browse All 14 Product Categories</span>
                             <ArrowRight className="w-4 h-4" />
                           </Link>
                           <div className="flex items-center gap-4">
