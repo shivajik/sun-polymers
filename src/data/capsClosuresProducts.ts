@@ -49,6 +49,20 @@ import ftc46mmDouble from "@/assets/products/caps-closures/46mm-double-ftc.jpg";
 import ftc53mmChDouble from "@/assets/products/caps-closures/53mm-ch-double-ftc.jpg";
 import ftc53mmDouble from "@/assets/products/caps-closures/53mm-double-ftc.jpg";
 import chapStick from "@/assets/products/caps-closures/chap-stick.jpg";
+import lotionPumps from "@/assets/products/caps-closures/lotion-pumps.jpg";
+import mistPumps from "@/assets/products/caps-closures/mist-pumps.jpg";
+import perfumeCaps from "@/assets/products/caps-closures/perfume-caps.jpg";
+import triggerPumps from "@/assets/products/caps-closures/trigger-pumps.jpg";
+import ftc14mm15mm from "@/assets/products/caps-closures/14mm-15mm-ftc.jpg";
+import ftc17mm19mm from "@/assets/products/caps-closures/17mm-19mm-ftc.jpg";
+import ftc19mm22mm from "@/assets/products/caps-closures/19mm-22mm-ftc.jpg";
+import ftc24mmRange1 from "@/assets/products/caps-closures/24mm-ftc-range1.jpg";
+import ftc24mmRange2 from "@/assets/products/caps-closures/24mm-ftc-range2.jpg";
+import ftc25mm from "@/assets/products/caps-closures/25mm-ftc.jpg";
+import ftc25mm28mm from "@/assets/products/caps-closures/25mm-28mm-ftc.jpg";
+import ftc28mm38mm from "@/assets/products/caps-closures/28mm-38mm-ftc.jpg";
+import ftc38mm45mm from "@/assets/products/caps-closures/38mm-45mm-ftc.jpg";
+import ftc46mm53mm from "@/assets/products/caps-closures/46mm-53mm-ftc.jpg";
 
 export interface CapsClosuresProduct {
   id: string;
@@ -109,4 +123,18 @@ export const capsClosuresProducts: CapsClosuresProduct[] = [
   { id: "53mm-ch-double-ftc", name: "53mm CH Double FTC", description: "53mm Child-Proof Double Flip Top Cap", image: ftc53mmChDouble },
   { id: "53mm-double-ftc", name: "53mm Double FTC", description: "53mm Double Flip Top Cap", image: ftc53mmDouble },
   { id: "chap-stick", name: "Chap Stick Cap", description: "Lip Balm / Chap Stick Cap", image: chapStick },
+  { id: "lotion-pumps", name: "Lotion Pumps", description: "Various Lotion Pump Dispensers", image: lotionPumps },
+  { id: "mist-pumps", name: "Mist Pumps", description: "Fine Mist Pump Sprayers", image: mistPumps },
+  { id: "perfume-caps", name: "Perfume Bottle Caps", description: "Premium Perfume & Fragrance Caps", image: perfumeCaps },
+  { id: "trigger-pumps", name: "Trigger Pumps", description: "Trigger Spray Pump Dispensers", image: triggerPumps },
+  { id: "14mm-15mm-ftc-range", name: "14mm-15mm FTC Range", description: "14mm to 15mm Flip Top Cap Range", image: ftc14mm15mm },
+  { id: "17mm-19mm-ftc-range", name: "17mm-19mm FTC Range", description: "17mm to 19mm Flip Top Cap Range", image: ftc17mm19mm },
+  { id: "19mm-22mm-ftc-range", name: "19mm-22mm FTC Range", description: "19mm to 22mm Flip Top Cap Range", image: ftc19mm22mm },
+  { id: "24mm-ftc-range-1", name: "24mm FTC Range 1", description: "24mm Flip Top Cap Range Collection 1", image: ftc24mmRange1 },
+  { id: "24mm-ftc-range-2", name: "24mm FTC Range 2", description: "24mm Flip Top Cap Range Collection 2", image: ftc24mmRange2 },
+  { id: "25mm-ftc", name: "25mm FTC", description: "25mm Flip Top Cap", image: ftc25mm },
+  { id: "25mm-28mm-ftc-range", name: "25mm-28mm FTC Range", description: "25mm to 28mm Flip Top Cap Range", image: ftc25mm28mm },
+  { id: "28mm-38mm-ftc-range", name: "28mm-38mm FTC Range", description: "28mm to 38mm Flip Top Cap Range", image: ftc28mm38mm },
+  { id: "38mm-45mm-ftc-range", name: "38mm-45mm FTC Range", description: "38mm to 45mm Flip Top Cap Range", image: ftc38mm45mm },
+  { id: "46mm-53mm-ftc-range", name: "46mm-53mm FTC Range", description: "46mm to 53mm Flip Top Cap Range", image: ftc46mm53mm },
 ];
