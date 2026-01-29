@@ -26,6 +26,7 @@ import { otherProducts } from "@/data/otherProducts";
 import { stationeryProducts } from "@/data/stationeryProducts";
 import { capsClosuresProducts } from "@/data/capsClosuresProducts";
 import { absElectroplatedProducts } from "@/data/absElectroplatedProducts";
+import { telecommunicationProducts } from "@/data/telecommunicationProducts";
 
 const ProductCategory = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -695,6 +696,44 @@ const ProductCategory = () => {
                   
                   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {absElectroplatedProducts.map((item, index) => (
+                      <motion.div
+                        key={item.id}
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                        transition={{ duration: 0.4, delay: 0.05 * index }}
+                        className="group bg-card rounded-xl overflow-hidden shadow-card hover:shadow-medium transition-all duration-300 border border-border/50 hover:border-accent/30 cursor-pointer"
+                        onClick={() => setSelectedImage({ src: item.image, name: item.name })}
+                      >
+                        <div className="aspect-square overflow-hidden bg-white flex items-center justify-center p-2">
+                          <img
+                            src={item.image}
+                            alt={item.name}
+                            className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                          />
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+
+              {/* Product Gallery for Telecommunication */}
+              {product.hasDetailedProducts && slug === "telecommunication-sector" && (
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="mt-16"
+                >
+                  <span className="inline-block px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-semibold mb-6">
+                    Our Products
+                  </span>
+                  <h2 className="font-heading text-3xl md:text-4xl text-foreground mb-8">
+                    <span className="text-accent">Telecommunication</span> Product Range
+                  </h2>
+                  
+                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    {telecommunicationProducts.map((item, index) => (
                       <motion.div
                         key={item.id}
                         initial={{ opacity: 0, scale: 0.9 }}

@@ -92,6 +92,7 @@ export const productCategories: ProductCategory[] = [
     heroDescription: "Reliable telecommunication components designed for network infrastructure and communication devices.",
     features: ["RF compatible", "Weather resistant", "Precision fit", "Long service life"],
     applications: ["Cable management", "Connector housings", "Antenna parts", "Network boxes", "Phone components"],
+    hasDetailedProducts: true,
   },
   {
     slug: "abs-electroplated",
