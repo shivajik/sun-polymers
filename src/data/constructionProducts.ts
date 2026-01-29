@@ -1,5 +1,7 @@
 import pvcShimPad from "@/assets/products/construction/pvc-shim-pad.jpg";
 import spacers from "@/assets/products/construction/spacers.jpg";
+import spacersColored from "@/assets/products/construction/spacers-colored.jpeg";
+import uShimPad from "@/assets/products/construction/u-shim-pad.jpeg";
 import orionBucket from "@/assets/products/construction/orion-bucket.jpg";
 import dynamicBucket from "@/assets/products/construction/dynamic-bucket.jpg";
 import galaxyBucket from "@/assets/products/construction/galaxy-bucket.jpg";
@@ -34,6 +36,18 @@ export const constructionProducts: ConstructionProduct[] = [
     name: "Spacers",
     description: "Available in 1 to 5 MM sizes",
     image: spacers,
+  },
+  {
+    id: 16,
+    name: "Colored Spacers",
+    description: "Available in multiple colors - Green, Black, White, Blue, Red",
+    image: spacersColored,
+  },
+  {
+    id: 17,
+    name: "U-Shaped Shim Pad",
+    description: "Black U-shaped packing shim for precise alignment",
+    image: uShimPad,
   },
   {
     id: 3,
