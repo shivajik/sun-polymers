@@ -5,6 +5,25 @@ import { motion } from "framer-motion";
 import clientsLogos from "@/assets/clients/clients-logos.jpeg";
 
 const Clients = () => {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://sunpolymers.in/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Clients",
+        item: "https://sunpolymers.in/clients",
+      },
+    ],
+  };
+
   return (
     <>
       <Helmet>
@@ -13,9 +32,25 @@ const Clients = () => {
           name="description"
           content="Sun Polymers is trusted by industry leaders including VIP, Siemens, Safari, Godrej, Wipro, TDK, Lupin and many more. Explore our prestigious client portfolio."
         />
+        <meta
+          name="keywords"
+          content="Sun Polymers clients, plastic moulding clients India, manufacturing partners, trusted plastic manufacturer, industrial clients Maharashtra"
+        />
+        <link rel="canonical" href="https://sunpolymers.in/clients" />
+        
+        {/* GEO Tags for Local SEO */}
+        <meta name="geo.region" content="IN-MH" />
+        <meta name="geo.placename" content="Jalna" />
+        <meta name="geo.position" content="19.8347;75.8816" />
+        <meta name="ICBM" content="19.8347, 75.8816" />
+        
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://sunpolymers.in/clients" />
         <meta property="og:title" content="Our Clients | Sun Polymers" />
         <meta property="og:description" content="Trusted by leading brands across industries - VIP, Siemens, Safari, Godrej, Wipro, and more." />
-        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://sunpolymers.in/og-image.jpg" />
+
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       <Header />
