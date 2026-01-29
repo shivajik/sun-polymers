@@ -57,6 +57,8 @@ const FacilitySection = () => {
             <img
               src={factoryExterior}
               alt="Sun Polymers Factory Exterior - Manufacturing facility in Jalna, Maharashtra"
+              loading="lazy"
+              decoding="async"
               className="w-full h-64 md:h-80 object-cover"
             />
           </motion.div>
@@ -69,6 +71,8 @@ const FacilitySection = () => {
             <img
               src={manufacturingFloor}
               alt="Sun Polymers Manufacturing Floor - Injection moulding machines in operation"
+              loading="lazy"
+              decoding="async"
               className="w-full h-64 md:h-80 object-cover"
             />
           </motion.div>

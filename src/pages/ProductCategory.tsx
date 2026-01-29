@@ -250,6 +250,8 @@ const ProductCategory = () => {
                           <img
                             src={item.image}
                             alt={item.name}
+                            loading="lazy"
+                            decoding="async"
                             className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
                           />
                         </div>
@@ -288,6 +290,8 @@ const ProductCategory = () => {
                           <img
                             src={item.image}
                             alt={item.name}
+                            loading="lazy"
+                            decoding="async"
                             className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
                           />
                         </div>
@@ -326,6 +330,8 @@ const ProductCategory = () => {
                           <img
                             src={item.image}
                             alt={item.name}
+                            loading="lazy"
+                            decoding="async"
                             className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
                           />
                         </div>
@@ -364,6 +370,8 @@ const ProductCategory = () => {
                           <img
                             src={item.image}
                             alt={item.name}
+                            loading="lazy"
+                            decoding="async"
                             className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
                           />
                         </div>
@@ -402,6 +410,8 @@ const ProductCategory = () => {
                           <img
                             src={item.image}
                             alt={item.name}
+                            loading="lazy"
+                            decoding="async"
                             className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
                           />
                         </div>
@@ -440,6 +450,8 @@ const ProductCategory = () => {
                           <img
                             src={item.image}
                             alt={item.name}
+                            loading="lazy"
+                            decoding="async"
                             className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
                           />
                         </div>
@@ -478,6 +490,8 @@ const ProductCategory = () => {
                           <img
                             src={item.image}
                             alt={item.name}
+                            loading="lazy"
+                            decoding="async"
                             className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
                           />
                         </div>
@@ -516,6 +530,8 @@ const ProductCategory = () => {
                           <img
                             src={item.image}
                             alt={item.name}
+                            loading="lazy"
+                            decoding="async"
                             className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
                           />
                         </div>
@@ -554,6 +570,8 @@ const ProductCategory = () => {
                           <img
                             src={item.image}
                             alt={item.name}
+                            loading="lazy"
+                            decoding="async"
                             className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
                           />
                         </div>
@@ -592,6 +610,8 @@ const ProductCategory = () => {
                           <img
                             src={item.image}
                             alt={item.name}
+                            loading="lazy"
+                            decoding="async"
                             className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
                           />
                         </div>
@@ -630,6 +650,8 @@ const ProductCategory = () => {
                           <img
                             src={item.image}
                             alt={item.name}
+                            loading="lazy"
+                            decoding="async"
                             className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
                           />
                         </div>
@@ -668,6 +690,8 @@ const ProductCategory = () => {
                           <img
                             src={item.image}
                             alt={item.name}
+                            loading="lazy"
+                            decoding="async"
                             className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
                           />
                         </div>
