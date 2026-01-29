@@ -9,7 +9,7 @@ import { useToast } from "@/hooks/use-toast";
 
 const phoneNumbers = [
   "+91 98220 07676",
-  "+91 99701 50161",
+  "+91 93225 78245",
   "+91 98224 02476",
   "+91 99701 50162",
 ];
