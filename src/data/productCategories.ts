@@ -9,7 +9,8 @@ import {
   Sprout, 
   Briefcase,
   Droplets,
-  CircleDot
+  CircleDot,
+  PenTool
 } from "lucide-react";
 
 export interface ProductCategory {
@@ -144,6 +145,17 @@ export const productCategories: ProductCategory[] = [
     heroDescription: "High-quality caps and closures engineered for pharmaceutical, cosmetic, and food packaging industries.",
     features: ["Leak-proof sealing", "Child-resistant options", "Custom colors", "Tamper-evident designs", "Multiple sizes available"],
     applications: ["Pharmaceutical packaging", "Cosmetic bottles", "Food containers", "Perfume bottles", "Household products"],
+    hasDetailedProducts: true,
+  },
+  {
+    slug: "stationery-sector",
+    name: "Stationery Sector",
+    shortName: "Stationery",
+    icon: PenTool,
+    description: "Quality plastic components for stationery and educational products.",
+    heroDescription: "Durable and functional stationery components designed for students, professionals, and creative applications.",
+    features: ["Precision molding", "Child-safe materials", "Vibrant colors", "Durable construction"],
+    applications: ["Geometry boxes", "Scales & rulers", "Colour boxes", "Tape dispensers", "Palette boxes"],
     hasDetailedProducts: true,
   },
 ];
