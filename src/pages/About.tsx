@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AboutSection from "@/components/AboutSection";
 import AchievementsSection from "@/components/AchievementsSection";
 import StrategySection from "@/components/StrategySection";
 import StrengthSection from "@/components/StrengthSection";
@@ -112,6 +113,7 @@ const About = () => {
             </div>
           </section>
 
+          <AboutSection />
           <StrengthSection />
           <FacilitySection />
           <StrategySection />
