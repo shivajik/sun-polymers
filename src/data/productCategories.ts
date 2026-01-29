@@ -11,7 +11,8 @@ import {
   Pencil, 
   Sprout, 
   Briefcase,
-  Droplets
+  Droplets,
+  CircleDot
 } from "lucide-react";
 
 export interface ProductCategory {
@@ -166,6 +167,17 @@ export const productCategories: ProductCategory[] = [
     heroDescription: "High-quality dispenser pumps designed for consistent, reliable dispensing performance.",
     features: ["Precise dosing", "Leak-proof design", "Chemical resistant", "Smooth operation"],
     applications: ["Cosmetic dispensers", "Soap pumps", "Lotion pumps", "Sanitizer dispensers", "Industrial dispensers"],
+    hasDetailedProducts: true,
+  },
+  {
+    slug: "caps-closures",
+    name: "Caps & Closures",
+    shortName: "Caps",
+    icon: CircleDot,
+    description: "Premium flip top caps, perfume caps, and dispenser pumps for packaging applications.",
+    heroDescription: "High-quality caps and closures engineered for pharmaceutical, cosmetic, and food packaging industries.",
+    features: ["Leak-proof sealing", "Child-resistant options", "Custom colors", "Tamper-evident designs", "Multiple sizes available"],
+    applications: ["Pharmaceutical packaging", "Cosmetic bottles", "Food containers", "Perfume bottles", "Household products"],
     hasDetailedProducts: true,
   },
 ];
