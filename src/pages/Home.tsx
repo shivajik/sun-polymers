@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 const quickHighlights = [
   "ISO 9001:2015 Certified",
-  "28+ Years of Excellence",
+  "35+ Years of Excellence",
   "100+ Happy Clients",
   "Custom Mould Design",
 ];
@@ -60,7 +60,7 @@ const Home = () => {
     logo: "https://sunpolymers.in/logo.png",
     foundingDate: "1990",
     description:
-      "Sun Polymers is a leading plastic injection moulding company in Jalna, Maharashtra with 28+ years of experience manufacturing customised industrial and domestic plastic products.",
+      "Sun Polymers is a leading plastic injection moulding company in Jalna, Maharashtra with 35+ years of experience manufacturing customised industrial and domestic plastic products.",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Jalna",
@@ -110,7 +110,7 @@ const Home = () => {
         <title>Sun Polymers | Plastic Injection Moulding Manufacturer in Jalna, Maharashtra</title>
         <meta
           name="description"
-          content="Sun Polymers is an ISO 9001:2015 certified plastic injection moulding company in Jalna, Maharashtra. 28+ years experience manufacturing precision plastic products for appliances, electronics, agriculture & more."
+          content="Sun Polymers is an ISO 9001:2015 certified plastic injection moulding company in Jalna, Maharashtra. 35+ years experience manufacturing precision plastic products for appliances, electronics, agriculture & more."
         />
         <meta
           name="keywords"
@@ -123,7 +123,7 @@ const Home = () => {
         <meta property="og:title" content="Sun Polymers | Leading Plastic Injection Moulding Manufacturer" />
         <meta
           property="og:description"
-          content="ISO 9001:2015 certified manufacturer of precision plastic products with 28+ years of experience."
+          content="ISO 9001:2015 certified manufacturer of precision plastic products with 35+ years of experience."
         />
         <meta property="og:image" content="https://sunpolymers.in/og-image.jpg" />
         <meta property="og:locale" content="en_IN" />
@@ -132,7 +132,7 @@ const Home = () => {
         <meta name="twitter:title" content="Sun Polymers | Plastic Injection Moulding Manufacturer" />
         <meta
           name="twitter:description"
-          content="ISO 9001:2015 certified manufacturer of precision plastic products with 28+ years of experience."
+          content="ISO 9001:2015 certified manufacturer of precision plastic products with 35+ years of experience."
         />
 
         <meta name="geo.region" content="IN-MH" />
@@ -237,7 +237,7 @@ const Home = () => {
                     transition={{ duration: 0.5, delay: 0.6 }}
                     className="bg-primary rounded-2xl p-8 text-center"
                   >
-                    <div className="font-heading font-bold text-5xl text-accent mb-2">28+</div>
+                    <div className="font-heading font-bold text-5xl text-accent mb-2">35+</div>
                     <div className="text-primary-foreground text-lg">Years of Excellence</div>
                     <div className="text-primary-foreground/70 text-sm mt-1">Since 1990</div>
                   </motion.div>

@@ -5,7 +5,7 @@ import heroImage from "@/assets/hero-manufacturing.jpg";
 import { Link } from "react-router-dom";
 
 const stats = [
-  { icon: Factory, value: "28+", label: "Years Experience" },
+  { icon: Factory, value: "35+", label: "Years Experience" },
   { icon: Award, value: "ISO", label: "9001:2015 Certified" },
   { icon: Users, value: "100+", label: "Clients Served" },
 ];
