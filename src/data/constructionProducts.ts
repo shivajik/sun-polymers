@@ -6,16 +6,16 @@ import orionBucket from "@/assets/products/construction/orion-bucket.jpg";
 import dynamicBucket from "@/assets/products/construction/dynamic-bucket.jpg";
 import galaxyBucket from "@/assets/products/construction/galaxy-bucket.jpg";
 import spiBucket from "@/assets/products/construction/spi-bucket.jpg";
-
+import rebarSafetyCap from "@/assets/products/construction/rebar-safety-cap.jpg";
 import scaffoldingTag from "@/assets/products/construction/scaffolding-tag.jpg";
 import safetyHelmetYellow from "@/assets/products/construction/safety-helmet-yellow.webp";
 import safetyHelmetNape from "@/assets/products/construction/safety-helmet-nape.jpg";
+import safetyHelmetRatchet from "@/assets/products/construction/safety-helmet-ratchet.jpg";
 import lanyardHarness from "@/assets/products/construction/lanyard-harness.jpg";
 import pvcCone from "@/assets/products/construction/pvc-cone.jpg";
 import pvcPipe from "@/assets/products/construction/pvc-pipe.jpg";
 import pvcChamfer from "@/assets/products/construction/pvc-chamfer.jpg";
 import miscFittings1 from "@/assets/products/construction/misc-fittings-1.jpg";
-
 
 export interface ConstructionProduct {
   id: number;
@@ -74,6 +74,18 @@ export const constructionProducts: ConstructionProduct[] = [
     image: spacersColored,
   },
   {
+    id: 18,
+    name: "Rebar Safety Cap",
+    description: "Protective mushroom cap for rebar ends",
+    image: rebarSafetyCap,
+  },
+  {
+    id: 12,
+    name: "PVC Cone",
+    description: "Traffic and safety marking cone",
+    image: pvcCone,
+  },
+  {
     id: 9,
     name: "Safety Helmet - Yellow",
     description: "Industrial safety helmet in high-visibility yellow",
@@ -86,6 +98,12 @@ export const constructionProducts: ConstructionProduct[] = [
     image: safetyHelmetNape,
   },
   {
+    id: 19,
+    name: "Safety Helmet - Ratchet Type",
+    description: "Industrial safety helmet with ratchet adjustment",
+    image: safetyHelmetRatchet,
+  },
+  {
     id: 11,
     name: "Lanyard and Safety Harness",
     description: "Fall protection safety equipment",
@@ -96,12 +114,6 @@ export const constructionProducts: ConstructionProduct[] = [
     name: "Scaffolding Tag Holder",
     description: "Safety inspection and erection record holder",
     image: scaffoldingTag,
-  },
-  {
-    id: 12,
-    name: "PVC Cone",
-    description: "Traffic and safety marking cone",
-    image: pvcCone,
   },
   {
     id: 13,
