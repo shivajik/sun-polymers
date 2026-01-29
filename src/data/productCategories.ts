@@ -102,6 +102,7 @@ export const productCategories: ProductCategory[] = [
     heroDescription: "High-quality ABS electroplated products offering the elegance of metal with the benefits of plastic.",
     features: ["Chrome finish", "Corrosion resistant", "Lightweight", "Cost-effective"],
     applications: ["Decorative trims", "Badges & emblems", "Automotive accents", "Consumer electronics", "Bathroom fittings"],
+    hasDetailedProducts: true,
   },
   {
     slug: "construction-sector",
