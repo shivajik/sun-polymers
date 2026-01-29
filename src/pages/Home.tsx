@@ -63,9 +63,11 @@ const Home = () => {
       "Sun Polymers is a leading plastic injection moulding company in Jalna, Maharashtra with 35+ years of experience manufacturing customised industrial and domestic plastic products.",
     address: {
       "@type": "PostalAddress",
+      streetAddress: "D-55/2, Additional MIDC",
       addressLocality: "Jalna",
       addressRegion: "Maharashtra",
-      addressCountry: "India",
+      postalCode: "431203",
+      addressCountry: "IN",
     },
     contactPoint: {
       "@type": "ContactPoint",
@@ -85,6 +87,7 @@ const Home = () => {
     telephone: "+91-98220-07676",
     address: {
       "@type": "PostalAddress",
+      streetAddress: "D-55/2, Additional MIDC",
       addressLocality: "Jalna",
       addressRegion: "Maharashtra",
       postalCode: "431203",

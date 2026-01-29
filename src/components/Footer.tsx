@@ -41,9 +41,12 @@ const Footer = () => {
                   <a href="mailto:sunpolymers2000@yahoo.co.in" className="hover:text-accent transition-colors">sunpolymers2000@yahoo.co.in</a>
                 </div>
               </div>
-              <div className="flex items-center gap-3 text-primary-foreground/80">
-                <MapPin className="w-5 h-5" />
-                Jalna, Maharashtra, India
+              <div className="flex items-start gap-3 text-primary-foreground/80">
+                <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                <div>
+                  D-55/2, Additional MIDC,<br />
+                  Jalna – 431203, MH, India
+                </div>
               </div>
             </div>
           </div>

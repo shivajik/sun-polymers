@@ -37,7 +37,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Location",
-    value: "Jalna, Maharashtra, India",
+    value: "D-55/2, Additional MIDC, Jalna – 431203, MH, India",
     href: null,
     additionalValues: [],
   },
@@ -283,7 +283,8 @@ const ContactSection = () => {
                 Visit Our Facility
               </h4>
               <p className="text-primary-foreground/80 mb-4">
-                Jalna, Maharashtra, India
+                D-55/2, Additional MIDC,<br />
+                Jalna – 431203, MH, India
               </p>
               <p className="text-primary-foreground/60 text-sm">
                 Contact us to schedule a factory tour
