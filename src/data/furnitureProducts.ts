@@ -22,6 +22,7 @@ import squareEndCapBlack from "@/assets/products/furniture/square-end-cap-black.
 import connectorSetWhite from "@/assets/products/furniture/connector-set-white.jpg";
 import connectorSetBlack from "@/assets/products/furniture/connector-set-black.jpg";
 import furnitureFittingsSet from "@/assets/products/furniture/furniture-fittings-set.jpg";
+import furnitureSpacers from "@/assets/products/furniture/furniture-spacers.jpeg";
 
 export interface FurnitureProduct {
   id: string;
@@ -174,5 +175,11 @@ export const furnitureProducts: FurnitureProduct[] = [
     name: "Furniture Fittings Set",
     description: "Comprehensive collection of furniture fittings and connectors for modular assembly",
     image: furnitureFittingsSet,
+  },
+  {
+    id: "furniture-spacers",
+    name: "Furniture Spacers",
+    description: "White plastic spacers for furniture leg height adjustment",
+    image: furnitureSpacers,
   },
 ];
