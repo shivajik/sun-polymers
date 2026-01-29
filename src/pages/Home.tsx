@@ -39,7 +39,7 @@ const strengthPoints = [
   {
     icon: Users,
     title: "Experienced Team",
-    description: "Management with 30+ years of industry experience, backed by senior officers with 15-20 years expertise",
+    description: "Management with 35+ years of industry experience, backed by senior officers with 15-20 years expertise",
   },
   {
     icon: Shield,
