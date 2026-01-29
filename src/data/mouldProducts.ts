@@ -1,10 +1,8 @@
 import chairMould from "@/assets/products/moulds/chair-mould.jpg";
-import multiCavityMould from "@/assets/products/moulds/multi-cavity-mould.jpg";
 import bumperMould from "@/assets/products/moulds/bumper-mould.jpg";
 import precisionMould from "@/assets/products/moulds/precision-mould.jpg";
 import stackMould from "@/assets/products/moulds/stack-mould.jpg";
 import hotRunnerMould from "@/assets/products/moulds/hot-runner-mould.jpg";
-import electronicMeterMould from "@/assets/products/moulds/electronic-meter-mould.jpg";
 
 export interface MouldProduct {
   id: string;
@@ -19,12 +17,6 @@ export const mouldProducts: MouldProduct[] = [
     name: "Chair Mould",
     description: "Large-scale injection mould for manufacturing plastic chairs and seating components.",
     image: chairMould,
-  },
-  {
-    id: "multi-cavity-mould",
-    name: "Multi-Cavity Mould",
-    description: "High-volume multi-cavity injection mould for efficient mass production.",
-    image: multiCavityMould,
   },
   {
     id: "bumper-mould",
@@ -49,11 +41,5 @@ export const mouldProducts: MouldProduct[] = [
     name: "Hot Runner Mould",
     description: "Advanced hot runner mould system for waste-free injection moulding.",
     image: hotRunnerMould,
-  },
-  {
-    id: "electronic-meter-mould",
-    name: "Electronic Meter Housing Mould",
-    description: "Single-cavity mould for precision electronic meter housings and enclosures.",
-    image: electronicMeterMould,
   },
 ];
