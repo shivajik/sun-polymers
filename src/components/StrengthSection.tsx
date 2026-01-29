@@ -16,7 +16,7 @@ const strengths = [
     icon: Users,
     title: "Experienced Management Team",
     description:
-      "Our Managing Partner Mr. Sanjay S. Mantri has around thirty years of experience in the Industry after completion of post graduate diploma in Plastic Engineering from (CIPET Chennai) after completion of B.E. (Mech).",
+      "Our Managing Partner Mr. Sanjay S. Mantri has around 35 years of experience in the Industry after completion of post graduate diploma in Plastic Engineering from (CIPET Chennai) after completion of B.E. (Mech).",
     details:
       "Besides the Managing Partner, our other partner Mr. Ajay R. Maheshwari is a graduate in Engineering faculty and has got vast experience in the industry. Our Director Chartered Accountant Rohan Mantri, is proficient and experienced in financial and commercial front of the business. Moreover the Management team comprises of senior officers with individual experience ranging from fifteen to twenty years, in the manufacturing industry.",
   },
