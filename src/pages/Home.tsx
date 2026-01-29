@@ -69,7 +69,7 @@ const Home = () => {
     },
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+91-2482-230335",
+      telephone: "+91-98220-07676",
       email: "sales@sunpolymers.in",
       contactType: "sales",
     },
@@ -82,7 +82,7 @@ const Home = () => {
     image: "https://sunpolymers.in/hero-manufacturing.jpg",
     "@id": "https://sunpolymers.in",
     url: "https://sunpolymers.in",
-    telephone: "+91-2482-230335",
+    telephone: "+91-98220-07676",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Jalna",

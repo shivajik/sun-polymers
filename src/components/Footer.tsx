@@ -25,20 +25,22 @@ const Footer = () => {
               for diverse industries.
             </p>
             <div className="space-y-3">
-              <a 
-                href="tel:+912482230335" 
-                className="flex items-center gap-3 text-primary-foreground/80 hover:text-accent transition-colors"
-              >
-                <Phone className="w-5 h-5" />
-                +91 (2482) 230335
-              </a>
-              <a 
-                href="mailto:sales@sunpolymers.in" 
-                className="flex items-center gap-3 text-primary-foreground/80 hover:text-accent transition-colors"
-              >
-                <Mail className="w-5 h-5" />
-                sales@sunpolymers.in
-              </a>
+              <div className="flex items-start gap-3 text-primary-foreground/80">
+                <Phone className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                <div className="flex flex-col gap-1">
+                  <a href="tel:+919822007676" className="hover:text-accent transition-colors">+91 98220 07676</a>
+                  <a href="tel:+919970150161" className="hover:text-accent transition-colors">+91 99701 50161</a>
+                  <a href="tel:+919822402476" className="hover:text-accent transition-colors">+91 98224 02476</a>
+                  <a href="tel:+919970150162" className="hover:text-accent transition-colors">+91 99701 50162</a>
+                </div>
+              </div>
+              <div className="flex items-start gap-3 text-primary-foreground/80">
+                <Mail className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                <div className="flex flex-col gap-1">
+                  <a href="mailto:sales@sunpolymers.in" className="hover:text-accent transition-colors">sales@sunpolymers.in</a>
+                  <a href="mailto:sunpolymers2000@yahoo.co.in" className="hover:text-accent transition-colors">sunpolymers2000@yahoo.co.in</a>
+                </div>
+              </div>
               <div className="flex items-center gap-3 text-primary-foreground/80">
                 <MapPin className="w-5 h-5" />
                 Jalna, Maharashtra, India

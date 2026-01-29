@@ -7,30 +7,46 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 
+const phoneNumbers = [
+  "+91 98220 07676",
+  "+91 99701 50161",
+  "+91 98224 02476",
+  "+91 99701 50162",
+];
+
+const emailAddresses = [
+  "sales@sunpolymers.in",
+  "sunpolymers2000@yahoo.co.in",
+];
+
 const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    value: "+91 (2482) 230335",
-    href: "tel:+912482230335",
+    value: phoneNumbers[0],
+    href: `tel:${phoneNumbers[0].replace(/\s/g, '')}`,
+    additionalValues: phoneNumbers.slice(1).map(p => ({ value: p, href: `tel:${p.replace(/\s/g, '')}` })),
   },
   {
     icon: Mail,
     title: "Email",
-    value: "sales@sunpolymers.in",
-    href: "mailto:sales@sunpolymers.in",
+    value: emailAddresses[0],
+    href: `mailto:${emailAddresses[0]}`,
+    additionalValues: emailAddresses.slice(1).map(e => ({ value: e, href: `mailto:${e}` })),
   },
   {
     icon: MapPin,
     title: "Location",
     value: "Jalna, Maharashtra, India",
     href: null,
+    additionalValues: [],
   },
   {
     icon: Clock,
     title: "Business Hours",
     value: "Mon - Sat: 9:00 AM - 6:00 PM",
     href: null,
+    additionalValues: [],
   },
 ];
 
@@ -221,19 +237,30 @@ const ContactSection = () => {
                 transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
                 className="bg-card rounded-2xl p-6 shadow-card border border-border/50 group hover:shadow-medium transition-all duration-300"
               >
-                <div className="flex items-center gap-4">
+                <div className="flex items-start gap-4">
                   <div className="w-14 h-14 rounded-xl bg-gradient-accent flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <info.icon className="w-6 h-6 text-accent-foreground" />
                   </div>
                   <div>
                     <div className="text-sm text-muted-foreground mb-1">{info.title}</div>
                     {info.href ? (
-                      <a
-                        href={info.href}
-                        className="font-heading font-semibold text-lg text-foreground hover:text-accent transition-colors"
-                      >
-                        {info.value}
-                      </a>
+                      <div className="flex flex-col gap-1">
+                        <a
+                          href={info.href}
+                          className="font-heading font-semibold text-lg text-foreground hover:text-accent transition-colors"
+                        >
+                          {info.value}
+                        </a>
+                        {info.additionalValues?.map((additional, idx) => (
+                          <a
+                            key={idx}
+                            href={additional.href}
+                            className="font-heading font-medium text-base text-foreground/80 hover:text-accent transition-colors"
+                          >
+                            {additional.value}
+                          </a>
+                        ))}
+                      </div>
                     ) : (
                       <div className="font-heading font-semibold text-lg text-foreground">
                         {info.value}
