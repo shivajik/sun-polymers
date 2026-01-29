@@ -175,7 +175,7 @@ const Home = () => {
                   </p>
                   
                   <p className="text-muted-foreground mb-8 leading-relaxed">
-                    With over 28 years of experience in design for manufacturability and production, 
+                    With over 35 years of experience in design for manufacturability and production, 
                     we are supported by excellent infrastructure and highly experienced technical workforce 
                     to undertake jobs of highly complex nature.
                   </p>
