@@ -49,6 +49,16 @@ import ftc46mmDouble from "@/assets/products/caps-closures/46mm-double-ftc.jpg";
 import ftc53mmChDouble from "@/assets/products/caps-closures/53mm-ch-double-ftc.jpg";
 import ftc53mmDouble from "@/assets/products/caps-closures/53mm-double-ftc.jpg";
 import chapStick from "@/assets/products/caps-closures/chap-stick.jpg";
+import perfumeCapSilverTeardrop from "@/assets/products/caps-closures/perfume-cap-silver-teardrop.png";
+import perfumeCapGoldRibbed from "@/assets/products/caps-closures/perfume-cap-gold-ribbed.png";
+import perfumeCapWhiteGold from "@/assets/products/caps-closures/perfume-cap-white-gold.png";
+import perfumeCapGoldTextured from "@/assets/products/caps-closures/perfume-cap-gold-textured.png";
+import perfumeCapRectangular from "@/assets/products/caps-closures/perfume-cap-rectangular.png";
+import perfumeCapBlueOval from "@/assets/products/caps-closures/perfume-cap-blue-oval.png";
+import perfumeCapBlackGold from "@/assets/products/caps-closures/perfume-cap-black-gold.png";
+import perfumeCapSquare from "@/assets/products/caps-closures/perfume-cap-square.png";
+import perfumeCapCurved from "@/assets/products/caps-closures/perfume-cap-curved.png";
+import perfumeCapOvalBlack from "@/assets/products/caps-closures/perfume-cap-oval-black.png";
 
 export interface CapsClosuresProduct {
   id: string;
@@ -109,4 +119,14 @@ export const capsClosuresProducts: CapsClosuresProduct[] = [
   { id: "53mm-ch-double-ftc", name: "53mm CH Double FTC", description: "53mm Child-Proof Double Flip Top Cap", image: ftc53mmChDouble },
   { id: "53mm-double-ftc", name: "53mm Double FTC", description: "53mm Double Flip Top Cap", image: ftc53mmDouble },
   { id: "chap-stick", name: "Chap Stick Cap", description: "Lip Balm / Chap Stick Cap", image: chapStick },
+  { id: "perfume-cap-silver-teardrop", name: "Silver Teardrop Perfume Cap", description: "Premium Silver Teardrop Perfume Bottle Cap", image: perfumeCapSilverTeardrop },
+  { id: "perfume-cap-gold-ribbed", name: "Gold Ribbed Perfume Cap", description: "Elegant Gold Ribbed Perfume Bottle Cap", image: perfumeCapGoldRibbed },
+  { id: "perfume-cap-white-gold", name: "White & Gold Perfume Cap", description: "White with Gold Interior Perfume Cap", image: perfumeCapWhiteGold },
+  { id: "perfume-cap-gold-textured", name: "Gold Textured Perfume Cap", description: "Textured Gold Perfume Bottle Cap", image: perfumeCapGoldTextured },
+  { id: "perfume-cap-rectangular", name: "Rectangular Perfume Cap", description: "Rectangular Design Perfume Bottle Cap", image: perfumeCapRectangular },
+  { id: "perfume-cap-blue-oval", name: "Blue Oval Perfume Cap", description: "Blue Oval Perfume Bottle Cap", image: perfumeCapBlueOval },
+  { id: "perfume-cap-black-gold", name: "Black & Gold Perfume Cap", description: "Black with Gold Accent Perfume Cap", image: perfumeCapBlackGold },
+  { id: "perfume-cap-square", name: "Square Perfume Cap", description: "Square Design Perfume Bottle Cap", image: perfumeCapSquare },
+  { id: "perfume-cap-curved", name: "Curved Perfume Cap", description: "Curved Design Perfume Bottle Cap", image: perfumeCapCurved },
+  { id: "perfume-cap-oval-black", name: "Oval Black Perfume Cap", description: "Oval Black with Gold Perfume Cap", image: perfumeCapOvalBlack },
 ];
