@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { CheckCircle, ArrowRight, Factory, Cog, Package, Award, Target, Sparkles, Shield, Handshake, Lightbulb, Users } from "lucide-react";
+import { CheckCircle, ArrowRight, Factory, Cog, Package, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -21,31 +21,6 @@ const services = [
   { icon: Cog, title: "Industrial Assemblies", description: "Complex multi-part solutions" },
   { icon: Factory, title: "Mould Manufacturing", description: "Expert tooling design" },
   { icon: Award, title: "Quality Assurance", description: "ISO certified processes" },
-];
-
-const missionPoints = [
-  { icon: Target, text: "Create world-class Customised Industrial and Domestic Products, Plastics Components, Electroplated ABS Components, Precision Moulds and Assemblies" },
-  { icon: Sparkles, text: "Meet Cost, Quality and Delivery requirements of customers" },
-  { icon: Lightbulb, text: "Continuously Innovate and Improve" },
-  { icon: Handshake, text: "Honor all commitments we undertake" },
-];
-
-const strengthPoints = [
-  {
-    icon: Package,
-    title: "One-Stop Solution",
-    description: "From product design to supply of finished products and assemblies - eliminating logistics problems and reducing costs",
-  },
-  {
-    icon: Users,
-    title: "Experienced Team",
-    description: "Management with 35+ years of industry experience, backed by senior officers with 15-20 years expertise",
-  },
-  {
-    icon: Shield,
-    title: "Quality Certified",
-    description: "ISO 9001:2015 certified with environmental friendly practices and constant upgrading at all levels",
-  },
 ];
 
 const Home = () => {
@@ -152,14 +127,13 @@ const Home = () => {
         <main>
           <HeroSection />
           
-          {/* About Company Section */}
-          <section className="py-20 lg:py-28 bg-background relative overflow-hidden">
+          {/* About Company Summary */}
+          <section className="py-20 lg:py-28 bg-background relative overflow-hidden" ref={ref}>
             <div className="container mx-auto px-4">
-              <div className="grid lg:grid-cols-2 gap-16 items-start">
-                {/* Left - About & Mission */}
+              <div className="max-w-4xl mx-auto text-center">
                 <motion.div
-                  initial={{ opacity: 0, x: -50 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : {}}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6 }}
                 >
                   <span className="inline-block px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-semibold mb-6">
@@ -174,98 +148,61 @@ const Home = () => {
                   <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                     Established in 1990, Sun Polymers has been a pioneer in manufacturing customised 
                     industrial and domestic products, injection moulding of high precision plastics products, 
-                    assemblies and moulds for diverse sectors.
+                    assemblies and moulds for Appliances, Luggage, Stationery, Electrical & Electronics, 
+                    Telecommunication, Agriculture, Sports sector and other ancillary sectors.
                   </p>
                   
                   <p className="text-muted-foreground mb-8 leading-relaxed">
-                    With over 35 years of experience in design for manufacturability and production, 
-                    we are supported by excellent infrastructure and highly experienced technical workforce 
-                    to undertake jobs of highly complex nature.
+                    With over 35 years of experience and ISO 9001:2015 certification, we deliver 
+                    world-class quality with a commitment to innovation and customer satisfaction.
                   </p>
+                </motion.div>
 
-                  {/* Mission Points */}
-                  <div className="space-y-4">
-                    <h3 className="font-heading font-bold text-xl text-foreground mb-4">Our Mission</h3>
-                    {missionPoints.map((point, index) => (
-                      <motion.div
-                        key={index}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={isInView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.4, delay: 0.1 * index }}
-                        className="flex items-start gap-3"
-                      >
-                        <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <point.icon className="w-4 h-4 text-accent" />
-                        </div>
-                        <span className="text-sm text-foreground leading-relaxed">{point.text}</span>
-                      </motion.div>
-                    ))}
+                {/* Stats Row */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10"
+                >
+                  <div className="bg-card rounded-xl p-6 shadow-card border border-border/50">
+                    <div className="font-heading font-bold text-3xl text-accent mb-1">35+</div>
+                    <div className="text-sm text-muted-foreground">Years Experience</div>
+                  </div>
+                  <div className="bg-card rounded-xl p-6 shadow-card border border-border/50">
+                    <div className="font-heading font-bold text-3xl text-accent mb-1">100+</div>
+                    <div className="text-sm text-muted-foreground">Happy Clients</div>
+                  </div>
+                  <div className="bg-card rounded-xl p-6 shadow-card border border-border/50">
+                    <div className="font-heading font-bold text-3xl text-accent mb-1">1000+</div>
+                    <div className="text-sm text-muted-foreground">Products Delivered</div>
+                  </div>
+                  <div className="bg-card rounded-xl p-6 shadow-card border border-border/50">
+                    <div className="font-heading font-bold text-3xl text-accent mb-1">ISO</div>
+                    <div className="text-sm text-muted-foreground">9001:2015 Certified</div>
                   </div>
                 </motion.div>
 
-                {/* Right - Strength Cards */}
+                {/* CTA */}
                 <motion.div
-                  initial={{ opacity: 0, x: 50 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  className="space-y-6"
-                  ref={ref}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  className="flex flex-col sm:flex-row gap-4 justify-center"
                 >
-                  {strengthPoints.map((strength, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={isInView ? { opacity: 1, y: 0 } : {}}
-                      transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                      className="bg-card rounded-2xl p-6 shadow-card hover:shadow-medium transition-all duration-300 border border-border/50 group"
-                    >
-                      <div className="flex items-start gap-4">
-                        <div className="w-14 h-14 rounded-xl bg-gradient-accent flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                          <strength.icon className="w-7 h-7 text-accent-foreground" />
-                        </div>
-                        <div>
-                          <h3 className="font-heading font-bold text-xl text-foreground mb-2">
-                            {strength.title}
-                          </h3>
-                          <p className="text-muted-foreground leading-relaxed">{strength.description}</p>
-                        </div>
-                      </div>
-                    </motion.div>
-                  ))}
-
-                  {/* Experience Badge */}
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                    transition={{ duration: 0.5, delay: 0.6 }}
-                    className="bg-primary rounded-2xl p-8 text-center"
-                  >
-                    <div className="font-heading font-bold text-5xl text-accent mb-2">35+</div>
-                    <div className="text-primary-foreground text-lg">Years of Excellence</div>
-                    <div className="text-primary-foreground/70 text-sm mt-1">Since 1990</div>
-                  </motion.div>
+                  <Button variant="accent" size="lg" asChild>
+                    <Link to="/about">
+                      Learn More About Us
+                      <ArrowRight className="w-5 h-5" />
+                    </Link>
+                  </Button>
+                  <Button variant="outline" size="lg" asChild>
+                    <Link to="/contact">
+                      Contact Us
+                    </Link>
+                  </Button>
                 </motion.div>
               </div>
-
-              {/* CTA */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.7 }}
-                className="flex flex-col sm:flex-row gap-4 justify-center mt-16"
-              >
-                <Button variant="accent" size="lg" asChild>
-                  <Link to="/about">
-                    Learn More About Us
-                    <ArrowRight className="w-5 h-5" />
-                  </Link>
-                </Button>
-                <Button variant="outline" size="lg" asChild>
-                  <Link to="/contact">
-                    Contact Us
-                  </Link>
-                </Button>
-              </motion.div>
             </div>
           </section>
 
