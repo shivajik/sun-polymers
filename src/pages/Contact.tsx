@@ -16,6 +16,7 @@ const Contact = () => {
       email: "sales@sunpolymers.in",
       address: {
         "@type": "PostalAddress",
+        streetAddress: "D-55/2, Additional MIDC",
         addressLocality: "Jalna",
         addressRegion: "Maharashtra",
         postalCode: "431203",

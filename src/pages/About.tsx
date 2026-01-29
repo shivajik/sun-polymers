@@ -15,7 +15,7 @@ const About = () => {
     description: "ISO 9001:2015 certified plastic injection moulding manufacturer with 35+ years of excellence",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "MIDC Industrial Area",
+      streetAddress: "D-55/2, Additional MIDC",
       addressLocality: "Jalna",
       addressRegion: "Maharashtra",
       postalCode: "431203",
