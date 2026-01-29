@@ -21,6 +21,7 @@ import drawerHandle from "@/assets/products/furniture/drawer-handle.jpg";
 import squareEndCapBlack from "@/assets/products/furniture/square-end-cap-black.jpg";
 import connectorSetWhite from "@/assets/products/furniture/connector-set-white.jpg";
 import connectorSetBlack from "@/assets/products/furniture/connector-set-black.jpg";
+import furnitureFittingsSet from "@/assets/products/furniture/furniture-fittings-set.jpg";
 
 export interface FurnitureProduct {
   id: string;
@@ -167,5 +168,11 @@ export const furnitureProducts: FurnitureProduct[] = [
     name: "Connector Set (Black)",
     description: "Complete set of black connectors including corners, joints, and caps",
     image: connectorSetBlack,
+  },
+  {
+    id: "furniture-fittings-set",
+    name: "Furniture Fittings Set",
+    description: "Comprehensive collection of furniture fittings and connectors for modular assembly",
+    image: furnitureFittingsSet,
   },
 ];

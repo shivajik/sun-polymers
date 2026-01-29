@@ -4,7 +4,7 @@ import orionBucket from "@/assets/products/construction/orion-bucket.jpg";
 import dynamicBucket from "@/assets/products/construction/dynamic-bucket.jpg";
 import galaxyBucket from "@/assets/products/construction/galaxy-bucket.jpg";
 import spiBucket from "@/assets/products/construction/spi-bucket.jpg";
-import rebarSafetyCap from "@/assets/products/construction/rebar-safety-cap.jpg";
+
 import scaffoldingTag from "@/assets/products/construction/scaffolding-tag.jpg";
 import safetyHelmetRatchet from "@/assets/products/construction/safety-helmet-ratchet.jpg";
 import safetyHelmetNape from "@/assets/products/construction/safety-helmet-nape.jpg";
@@ -58,12 +58,6 @@ export const constructionProducts: ConstructionProduct[] = [
     name: "SPI Bucket 12 Ltr",
     description: "Italy model design, 12-liter capacity",
     image: spiBucket,
-  },
-  {
-    id: 7,
-    name: "Rebar Safety Cap",
-    description: "Available for 8-16 mm and 16-32 mm rebar",
-    image: rebarSafetyCap,
   },
   {
     id: 8,
