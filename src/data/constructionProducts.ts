@@ -1,12 +1,11 @@
-import pvcShimPad from "@/assets/products/construction/pvc-shim-pad.jpg";
-import spacers from "@/assets/products/construction/spacers.jpg";
-import spacersColored from "@/assets/products/construction/spacers-colored.jpeg";
-import uShimPad from "@/assets/products/construction/u-shim-pad.jpeg";
-import orionBucket from "@/assets/products/construction/orion-bucket.jpg";
-import dynamicBucket from "@/assets/products/construction/dynamic-bucket.jpg";
-import galaxyBucket from "@/assets/products/construction/galaxy-bucket.jpg";
-import spiBucket from "@/assets/products/construction/spi-bucket.jpg";
-import rebarSafetyCap from "@/assets/products/construction/rebar-safety-cap.jpg";
+import bucket1 from "@/assets/products/construction/bucket-1.jpg";
+import bucket2 from "@/assets/products/construction/bucket-2.jpg";
+import bucket3 from "@/assets/products/construction/bucket-3.jpg";
+import bucket4 from "@/assets/products/construction/bucket-4.jpg";
+import safetyCapMushroom from "@/assets/products/construction/safety-cap-mushroom.jpg";
+import safetyCapBall from "@/assets/products/construction/safety-cap-ball.jpg";
+import spacersSet from "@/assets/products/construction/spacers-set.jfif";
+import spacersColoredNew from "@/assets/products/construction/spacers-colored-new.jpeg";
 import scaffoldingTag from "@/assets/products/construction/scaffolding-tag.jpg";
 import safetyHelmetYellow from "@/assets/products/construction/safety-helmet-yellow.webp";
 import safetyHelmetNape from "@/assets/products/construction/safety-helmet-nape.jpg";
@@ -26,109 +25,103 @@ export interface ConstructionProduct {
 
 export const constructionProducts: ConstructionProduct[] = [
   {
-    id: 3,
-    name: "Orion Bucket 8 Ltr",
-    description: "Durable 8-liter construction bucket",
-    image: orionBucket,
-  },
-  {
-    id: 4,
-    name: "Dynamic Bucket 10 Ltr",
-    description: "Heavy-duty 10-liter bucket",
-    image: dynamicBucket,
-  },
-  {
-    id: 5,
-    name: "Galaxy Bucket 12 Ltr",
-    description: "Large capacity 12-liter bucket",
-    image: galaxyBucket,
-  },
-  {
-    id: 6,
-    name: "SPI Bucket 12 Ltr",
-    description: "Italy model design, 12-liter capacity",
-    image: spiBucket,
-  },
-  {
     id: 1,
-    name: "PVC Packing Shim Pad",
-    description: "Available in 1 to 10 MM thickness",
-    image: pvcShimPad,
-  },
-  {
-    id: 17,
-    name: "U-Shaped Shim Pad",
-    description: "Black U-shaped packing shim for precise alignment",
-    image: uShimPad,
+    name: "Construction Bucket - Black",
+    description: "Durable black construction bucket with metal handle",
+    image: bucket1,
   },
   {
     id: 2,
-    name: "Spacers",
-    description: "Available in 1 to 5 MM sizes",
-    image: spacers,
+    name: "SPI Bucket - Yellow",
+    description: "Heavy-duty yellow bucket with SPI branding",
+    image: bucket2,
   },
   {
-    id: 16,
+    id: 3,
+    name: "Construction Bucket - Dark",
+    description: "Sturdy dark construction bucket",
+    image: bucket3,
+  },
+  {
+    id: 4,
+    name: "Construction Bucket - Large",
+    description: "Large capacity construction bucket with handle",
+    image: bucket4,
+  },
+  {
+    id: 5,
+    name: "Rebar Safety Cap - Mushroom",
+    description: "Protective mushroom cap for rebar ends",
+    image: safetyCapMushroom,
+  },
+  {
+    id: 6,
+    name: "Rebar Safety Cap - Ball",
+    description: "Ball-type protective cap for rebar ends",
+    image: safetyCapBall,
+  },
+  {
+    id: 7,
+    name: "Spacers Set",
+    description: "Construction spacers in various sizes",
+    image: spacersSet,
+  },
+  {
+    id: 8,
     name: "Colored Spacers",
     description: "Available in multiple colors - Green, Black, White, Blue, Red",
-    image: spacersColored,
+    image: spacersColoredNew,
   },
   {
-    id: 18,
-    name: "Rebar Safety Cap",
-    description: "Protective mushroom cap for rebar ends",
-    image: rebarSafetyCap,
-  },
-  {
-    id: 12,
+    id: 9,
     name: "PVC Cone",
     description: "Traffic and safety marking cone",
     image: pvcCone,
   },
   {
-    id: 9,
+    id: 10,
     name: "Safety Helmet - Yellow",
     description: "Industrial safety helmet in high-visibility yellow",
     image: safetyHelmetYellow,
   },
   {
-    id: 10,
+    id: 11,
     name: "Safety Helmet - Nape Type",
     description: "Industrial safety helmet with nape strap",
     image: safetyHelmetNape,
   },
   {
-    id: 19,
+    id: 12,
     name: "Safety Helmet - Ratchet Type",
     description: "Industrial safety helmet with ratchet adjustment",
     image: safetyHelmetRatchet,
   },
   {
-    id: 11,
+    id: 13,
     name: "Lanyard and Safety Harness",
     description: "Fall protection safety equipment",
     image: lanyardHarness,
   },
   {
-    id: 8,
+    id: 14,
     name: "Scaffolding Tag Holder",
     description: "Safety inspection and erection record holder",
     image: scaffoldingTag,
   },
   {
-    id: 13,
+    id: 15,
     name: "PVC Pipe",
     description: "Construction-grade PVC piping",
     image: pvcPipe,
   },
   {
-    id: 14,
+    id: 16,
     name: "PVC Chamfer",
     description: "Concrete forming chamfer strips",
     image: pvcChamfer,
   },
   {
-    id: 15,
+    id: 17,
     name: "Miscellaneous Fittings",
     description: "Various construction fittings and accessories",
     image: miscFittings1,
