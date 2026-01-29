@@ -13,7 +13,7 @@ import pvcCone from "@/assets/products/construction/pvc-cone.jpg";
 import pvcPipe from "@/assets/products/construction/pvc-pipe.jpg";
 import pvcChamfer from "@/assets/products/construction/pvc-chamfer.jpg";
 import miscFittings1 from "@/assets/products/construction/misc-fittings-1.jpg";
-import miscFittings2 from "@/assets/products/construction/misc-fittings-2.jpg";
+
 
 export interface ConstructionProduct {
   id: number;
@@ -106,11 +106,5 @@ export const constructionProducts: ConstructionProduct[] = [
     name: "Miscellaneous Fittings",
     description: "Various construction fittings and accessories",
     image: miscFittings1,
-  },
-  {
-    id: 16,
-    name: "Miscellaneous Fittings",
-    description: "Additional construction fittings",
-    image: miscFittings2,
   },
 ];
