@@ -58,6 +58,8 @@ const Clients = () => {
                 <img
                   src={clientsLogos}
                   alt="Our Clients - VIP, Aristocrat, Siemens, NRB, Samsonite, Safari, Murugappa Group, Godrej, Maersk Medical, Mahyco, Nilkamal, Whirlpool, Rieter, Sterlite, TDK, Nirlep, Wipro, Kenstar, Lumax, Lupin, bpergo, Tecumseh, Jain Irrigation Systems"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-auto object-contain"
                 />
               </div>
