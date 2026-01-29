@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import AboutSection from "@/components/AboutSection";
 import AchievementsSection from "@/components/AchievementsSection";
 import StrategySection from "@/components/StrategySection";
+import StrengthSection from "@/components/StrengthSection";
 
 const About = () => {
   const organizationSchema = {
@@ -112,6 +113,7 @@ const About = () => {
           </section>
 
           <AboutSection />
+          <StrengthSection />
           <StrategySection />
           <AchievementsSection />
         </main>
