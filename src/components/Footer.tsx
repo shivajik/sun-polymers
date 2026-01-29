@@ -20,7 +20,7 @@ const Footer = () => {
               />
             </Link>
             <p className="text-primary-foreground/80 mb-6 max-w-md leading-relaxed">
-              Pioneer in plastic injection moulding with over 34 years of experience. 
+              Pioneer in plastic injection moulding with over 35 years of experience. 
               ISO 9001:2015 certified manufacturer of high-precision plastic products 
               for diverse industries.
             </p>

@@ -54,7 +54,7 @@ const AchievementsSection = () => {
             A Legacy of <span className="text-accent">Excellence</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Over 28 years of commitment to quality, innovation, and customer satisfaction.
+            Over 35 years of commitment to quality, innovation, and customer satisfaction.
           </p>
         </motion.div>
 
