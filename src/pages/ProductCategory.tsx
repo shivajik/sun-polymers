@@ -252,14 +252,6 @@ const ProductCategory = () => {
                             className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
                           />
                         </div>
-                        <div className="p-4">
-                          <h3 className="font-semibold text-foreground text-sm mb-1 line-clamp-2">
-                            {item.name}
-                          </h3>
-                          <p className="text-xs text-muted-foreground line-clamp-2">
-                            {item.description}
-                          </p>
-                        </div>
                       </motion.div>
                     ))}
                   </div>
@@ -297,14 +289,6 @@ const ProductCategory = () => {
                             alt={item.name}
                             className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
                           />
-                        </div>
-                        <div className="p-4">
-                          <h3 className="font-semibold text-foreground text-sm mb-1 line-clamp-2">
-                            {item.name}
-                          </h3>
-                          <p className="text-xs text-muted-foreground line-clamp-2">
-                            {item.description}
-                          </p>
                         </div>
                       </motion.div>
                     ))}
@@ -344,14 +328,6 @@ const ProductCategory = () => {
                             className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
                           />
                         </div>
-                        <div className="p-4">
-                          <h3 className="font-semibold text-foreground text-sm mb-1 line-clamp-2">
-                            {item.name}
-                          </h3>
-                          <p className="text-xs text-muted-foreground line-clamp-2">
-                            {item.description}
-                          </p>
-                        </div>
                       </motion.div>
                     ))}
                   </div>
@@ -389,14 +365,6 @@ const ProductCategory = () => {
                             alt={item.name}
                             className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
                           />
-                        </div>
-                        <div className="p-4">
-                          <h3 className="font-semibold text-foreground text-sm mb-1 line-clamp-2">
-                            {item.name}
-                          </h3>
-                          <p className="text-xs text-muted-foreground line-clamp-2">
-                            {item.description}
-                          </p>
                         </div>
                       </motion.div>
                     ))}
@@ -436,14 +404,6 @@ const ProductCategory = () => {
                             className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
                           />
                         </div>
-                        <div className="p-4">
-                          <h3 className="font-semibold text-foreground text-sm mb-1 line-clamp-2">
-                            {item.name}
-                          </h3>
-                          <p className="text-xs text-muted-foreground line-clamp-2">
-                            {item.description}
-                          </p>
-                        </div>
                       </motion.div>
                     ))}
                   </div>
@@ -481,14 +441,6 @@ const ProductCategory = () => {
                             alt={item.name}
                             className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
                           />
-                        </div>
-                        <div className="p-4">
-                          <h3 className="font-semibold text-foreground text-sm mb-1 line-clamp-2">
-                            {item.name}
-                          </h3>
-                          <p className="text-xs text-muted-foreground line-clamp-2">
-                            {item.description}
-                          </p>
                         </div>
                       </motion.div>
                     ))}
@@ -528,14 +480,6 @@ const ProductCategory = () => {
                             className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
                           />
                         </div>
-                        <div className="p-4">
-                          <h3 className="font-semibold text-foreground text-sm mb-1 line-clamp-2">
-                            {item.name}
-                          </h3>
-                          <p className="text-xs text-muted-foreground line-clamp-2">
-                            {item.description}
-                          </p>
-                        </div>
                       </motion.div>
                     ))}
                   </div>
@@ -573,14 +517,6 @@ const ProductCategory = () => {
                             alt={item.name}
                             className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
                           />
-                        </div>
-                        <div className="p-4">
-                          <h3 className="font-semibold text-foreground text-sm mb-1 line-clamp-2">
-                            {item.name}
-                          </h3>
-                          <p className="text-xs text-muted-foreground line-clamp-2">
-                            {item.description}
-                          </p>
                         </div>
                       </motion.div>
                     ))}
@@ -620,14 +556,6 @@ const ProductCategory = () => {
                             className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
                           />
                         </div>
-                        <div className="p-4">
-                          <h3 className="font-semibold text-foreground text-sm mb-1 line-clamp-2">
-                            {item.name}
-                          </h3>
-                          <p className="text-xs text-muted-foreground line-clamp-2">
-                            {item.description}
-                          </p>
-                        </div>
                       </motion.div>
                     ))}
                   </div>
@@ -666,14 +594,6 @@ const ProductCategory = () => {
                             className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
                           />
                         </div>
-                        <div className="p-4">
-                          <h3 className="font-semibold text-foreground text-sm mb-1 line-clamp-2">
-                            {item.name}
-                          </h3>
-                          <p className="text-xs text-muted-foreground line-clamp-2">
-                            {item.description}
-                          </p>
-                        </div>
                       </motion.div>
                     ))}
                   </div>
@@ -711,14 +631,6 @@ const ProductCategory = () => {
                             alt={item.name}
                             className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
                           />
-                        </div>
-                        <div className="p-4">
-                          <h3 className="font-semibold text-foreground text-sm mb-1 line-clamp-2">
-                            {item.name}
-                          </h3>
-                          <p className="text-xs text-muted-foreground line-clamp-2">
-                            {item.description}
-                          </p>
                         </div>
                       </motion.div>
                     ))}
