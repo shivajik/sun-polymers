@@ -26,30 +26,6 @@ export interface ConstructionProduct {
 
 export const constructionProducts: ConstructionProduct[] = [
   {
-    id: 1,
-    name: "PVC Packing Shim Pad",
-    description: "Available in 1 to 10 MM thickness",
-    image: pvcShimPad,
-  },
-  {
-    id: 17,
-    name: "U-Shaped Shim Pad",
-    description: "Black U-shaped packing shim for precise alignment",
-    image: uShimPad,
-  },
-  {
-    id: 2,
-    name: "Spacers",
-    description: "Available in 1 to 5 MM sizes",
-    image: spacers,
-  },
-  {
-    id: 16,
-    name: "Colored Spacers",
-    description: "Available in multiple colors - Green, Black, White, Blue, Red",
-    image: spacersColored,
-  },
-  {
     id: 3,
     name: "Orion Bucket 8 Ltr",
     description: "Durable 8-liter construction bucket",
@@ -72,6 +48,30 @@ export const constructionProducts: ConstructionProduct[] = [
     name: "SPI Bucket 12 Ltr",
     description: "Italy model design, 12-liter capacity",
     image: spiBucket,
+  },
+  {
+    id: 1,
+    name: "PVC Packing Shim Pad",
+    description: "Available in 1 to 10 MM thickness",
+    image: pvcShimPad,
+  },
+  {
+    id: 17,
+    name: "U-Shaped Shim Pad",
+    description: "Black U-shaped packing shim for precise alignment",
+    image: uShimPad,
+  },
+  {
+    id: 2,
+    name: "Spacers",
+    description: "Available in 1 to 5 MM sizes",
+    image: spacers,
+  },
+  {
+    id: 16,
+    name: "Colored Spacers",
+    description: "Available in multiple colors - Green, Black, White, Blue, Red",
+    image: spacersColored,
   },
   {
     id: 9,
