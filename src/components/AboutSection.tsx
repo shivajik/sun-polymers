@@ -22,7 +22,7 @@ const values = [
 ];
 
 const highlights = [
-  "28+ years of manufacturing excellence",
+  "35+ years of manufacturing excellence",
   "Customised industrial & domestic products",
   "Import substitute products of international quality",
   "Highly experienced technical workforce",
@@ -123,7 +123,7 @@ const AboutSection = () => {
               transition={{ duration: 0.5, delay: 0.6 }}
               className="bg-primary rounded-2xl p-8 text-center"
             >
-              <div className="font-heading font-bold text-5xl text-accent mb-2">28+</div>
+              <div className="font-heading font-bold text-5xl text-accent mb-2">35+</div>
               <div className="text-primary-foreground text-lg">Years of Excellence</div>
               <div className="text-primary-foreground/70 text-sm mt-1">Since 1990</div>
             </motion.div>

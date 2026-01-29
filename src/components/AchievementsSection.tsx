@@ -28,7 +28,7 @@ const achievements = [
 
 const stats = [
   { value: "1990", label: "Established" },
-  { value: "28+", label: "Years Experience" },
+  { value: "35+", label: "Years Experience" },
   { value: "100+", label: "Happy Clients" },
   { value: "1000+", label: "Products Delivered" },
 ];
