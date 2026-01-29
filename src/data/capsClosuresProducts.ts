@@ -59,6 +59,8 @@ import perfumeCapBlackGold from "@/assets/products/caps-closures/perfume-cap-bla
 import perfumeCapSquare from "@/assets/products/caps-closures/perfume-cap-square.png";
 import perfumeCapCurved from "@/assets/products/caps-closures/perfume-cap-curved.png";
 import perfumeCapOvalBlack from "@/assets/products/caps-closures/perfume-cap-oval-black.png";
+import bottleHandles from "@/assets/products/caps-closures/bottle-handles.png";
+import metalizingFoilingCaps from "@/assets/products/caps-closures/metalizing-foiling-caps.png";
 
 export interface CapsClosuresProduct {
   id: string;
@@ -129,4 +131,6 @@ export const capsClosuresProducts: CapsClosuresProduct[] = [
   { id: "perfume-cap-square", name: "Square Perfume Cap", description: "Square Design Perfume Bottle Cap", image: perfumeCapSquare },
   { id: "perfume-cap-curved", name: "Curved Perfume Cap", description: "Curved Design Perfume Bottle Cap", image: perfumeCapCurved },
   { id: "perfume-cap-oval-black", name: "Oval Black Perfume Cap", description: "Oval Black with Gold Perfume Cap", image: perfumeCapOvalBlack },
+  { id: "bottle-handles", name: "Bottle Handles", description: "Colorful plastic bottle carrier handles in various sizes", image: bottleHandles },
+  { id: "metalizing-foiling-caps", name: "Metalizing & Foiling Caps", description: "Premium caps with metalizing and foiling finishes", image: metalizingFoilingCaps },
 ];
