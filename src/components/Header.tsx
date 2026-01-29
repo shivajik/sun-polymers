@@ -354,6 +354,17 @@ const Header = () => {
               </div>
 
               <Link
+                to="/clients"
+                className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
+                  isActive("/clients")
+                    ? "text-accent bg-accent/10"
+                    : "text-foreground/80 hover:text-accent hover:bg-accent/10"
+                }`}
+              >
+                Clients
+              </Link>
+
+              <Link
                 to="/contact"
                 className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
                   isActive("/contact")
@@ -530,6 +541,18 @@ const Header = () => {
                     )}
                   </AnimatePresence>
                 </div>
+
+                <Link
+                  to="/clients"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`px-4 py-3 text-left rounded-lg transition-colors ${
+                    isActive("/clients")
+                      ? "text-accent bg-accent/10"
+                      : "text-foreground hover:text-accent hover:bg-accent/10"
+                  }`}
+                >
+                  Clients
+                </Link>
 
                 <Link
                   to="/contact"
