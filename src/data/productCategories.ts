@@ -73,7 +73,7 @@ export const productCategories: ProductCategory[] = [
   {
     slug: "mathematical-learning-blocks",
     name: "Mathematical Learning Blocks / Cubes Sector",
-    shortName: "Learning Blocks",
+    shortName: "Mathematical Learning Blocks",
     icon: Blocks,
     description: "Educational plastic products for mathematical and cognitive learning development.",
     heroDescription: "Safe, colorful, and educational learning tools designed to make mathematics fun and engaging.",
