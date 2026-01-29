@@ -25,11 +25,18 @@ export interface ConstructionProduct {
 }
 
 export const constructionProducts: ConstructionProduct[] = [
+  // Shims & Spacers Group
   {
     id: 1,
     name: "PVC Packing Shim Pad",
     description: "Available in 1 to 10 MM thickness",
     image: pvcShimPad,
+  },
+  {
+    id: 17,
+    name: "U-Shaped Shim Pad",
+    description: "Black U-shaped packing shim for precise alignment",
+    image: uShimPad,
   },
   {
     id: 2,
@@ -43,12 +50,7 @@ export const constructionProducts: ConstructionProduct[] = [
     description: "Available in multiple colors - Green, Black, White, Blue, Red",
     image: spacersColored,
   },
-  {
-    id: 17,
-    name: "U-Shaped Shim Pad",
-    description: "Black U-shaped packing shim for precise alignment",
-    image: uShimPad,
-  },
+  // Buckets Group
   {
     id: 3,
     name: "Orion Bucket 8 Ltr",
@@ -73,12 +75,7 @@ export const constructionProducts: ConstructionProduct[] = [
     description: "Italy model design, 12-liter capacity",
     image: spiBucket,
   },
-  {
-    id: 8,
-    name: "Scaffolding Tag Holder",
-    description: "Safety inspection and erection record holder",
-    image: scaffoldingTag,
-  },
+  // Safety Equipment Group
   {
     id: 9,
     name: "Safety Helmet - Yellow",
@@ -98,6 +95,13 @@ export const constructionProducts: ConstructionProduct[] = [
     image: lanyardHarness,
   },
   {
+    id: 8,
+    name: "Scaffolding Tag Holder",
+    description: "Safety inspection and erection record holder",
+    image: scaffoldingTag,
+  },
+  // PVC Products Group
+  {
     id: 12,
     name: "PVC Cone",
     description: "Traffic and safety marking cone",
@@ -115,6 +119,7 @@ export const constructionProducts: ConstructionProduct[] = [
     description: "Concrete forming chamfer strips",
     image: pvcChamfer,
   },
+  // Miscellaneous
   {
     id: 15,
     name: "Miscellaneous Fittings",
