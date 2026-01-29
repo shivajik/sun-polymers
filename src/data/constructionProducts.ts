@@ -9,7 +9,7 @@ import spacersColoredNew from "@/assets/products/construction/spacers-colored-ne
 import scaffoldingTag from "@/assets/products/construction/scaffolding-tag.jpg";
 import safetyHelmetYellow from "@/assets/products/construction/safety-helmet-yellow.webp";
 import safetyHelmetNape from "@/assets/products/construction/safety-helmet-nape.jpg";
-import safetyHelmetRatchet from "@/assets/products/construction/safety-helmet-ratchet.jpg";
+
 import lanyardHarness from "@/assets/products/construction/lanyard-harness.jpg";
 import pvcCone from "@/assets/products/construction/pvc-cone.jpg";
 import pvcPipe from "@/assets/products/construction/pvc-pipe.jpg";
@@ -89,12 +89,6 @@ export const constructionProducts: ConstructionProduct[] = [
     name: "Safety Helmet - Nape Type",
     description: "Industrial safety helmet with nape strap",
     image: safetyHelmetNape,
-  },
-  {
-    id: 12,
-    name: "Safety Helmet - Ratchet Type",
-    description: "Industrial safety helmet with ratchet adjustment",
-    image: safetyHelmetRatchet,
   },
   {
     id: 13,
