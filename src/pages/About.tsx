@@ -5,6 +5,7 @@ import AboutSection from "@/components/AboutSection";
 import AchievementsSection from "@/components/AchievementsSection";
 import StrategySection from "@/components/StrategySection";
 import StrengthSection from "@/components/StrengthSection";
+import FacilitySection from "@/components/FacilitySection";
 
 const About = () => {
   const organizationSchema = {
@@ -114,6 +115,7 @@ const About = () => {
 
           <AboutSection />
           <StrengthSection />
+          <FacilitySection />
           <StrategySection />
           <AchievementsSection />
         </main>
