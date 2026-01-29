@@ -25,7 +25,6 @@ export interface ConstructionProduct {
 }
 
 export const constructionProducts: ConstructionProduct[] = [
-  // Shims & Spacers Group
   {
     id: 1,
     name: "PVC Packing Shim Pad",
@@ -50,7 +49,6 @@ export const constructionProducts: ConstructionProduct[] = [
     description: "Available in multiple colors - Green, Black, White, Blue, Red",
     image: spacersColored,
   },
-  // Buckets Group
   {
     id: 3,
     name: "Orion Bucket 8 Ltr",
@@ -75,7 +73,6 @@ export const constructionProducts: ConstructionProduct[] = [
     description: "Italy model design, 12-liter capacity",
     image: spiBucket,
   },
-  // Safety Equipment Group
   {
     id: 9,
     name: "Safety Helmet - Yellow",
@@ -100,7 +97,6 @@ export const constructionProducts: ConstructionProduct[] = [
     description: "Safety inspection and erection record holder",
     image: scaffoldingTag,
   },
-  // PVC Products Group
   {
     id: 12,
     name: "PVC Cone",
@@ -119,7 +115,6 @@ export const constructionProducts: ConstructionProduct[] = [
     description: "Concrete forming chamfer strips",
     image: pvcChamfer,
   },
-  // Miscellaneous
   {
     id: 15,
     name: "Miscellaneous Fittings",
