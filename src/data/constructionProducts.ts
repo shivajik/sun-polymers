@@ -6,7 +6,7 @@ import galaxyBucket from "@/assets/products/construction/galaxy-bucket.jpg";
 import spiBucket from "@/assets/products/construction/spi-bucket.jpg";
 
 import scaffoldingTag from "@/assets/products/construction/scaffolding-tag.jpg";
-import safetyHelmetRatchet from "@/assets/products/construction/safety-helmet-ratchet.jpg";
+import safetyHelmetYellow from "@/assets/products/construction/safety-helmet-yellow.webp";
 import safetyHelmetNape from "@/assets/products/construction/safety-helmet-nape.jpg";
 import lanyardHarness from "@/assets/products/construction/lanyard-harness.jpg";
 import pvcCone from "@/assets/products/construction/pvc-cone.jpg";
@@ -67,9 +67,9 @@ export const constructionProducts: ConstructionProduct[] = [
   },
   {
     id: 9,
-    name: "Safety Helmet - Ratchet Type",
-    description: "Industrial safety helmet with ratchet adjustment",
-    image: safetyHelmetRatchet,
+    name: "Safety Helmet - Yellow",
+    description: "Industrial safety helmet in high-visibility yellow",
+    image: safetyHelmetYellow,
   },
   {
     id: 10,
