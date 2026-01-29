@@ -58,7 +58,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl leading-relaxed drop-shadow-md"
           >
-            With over 28 years of experience, we manufacture customised industrial & domestic 
+            With over 35 years of experience, we manufacture customised industrial & domestic 
             plastic products, assemblies and moulds for Appliances, Luggage, Stationery, 
             Electrical & Electronics, Telecommunication, Agriculture, and Sports sectors.
           </motion.p>
