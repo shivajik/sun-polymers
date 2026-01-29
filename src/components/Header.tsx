@@ -21,7 +21,7 @@ const productGroups = {
   consumer: {
     title: "Consumer Products",
     icon: Package,
-    items: ["furniture-sector", "luggage-sector", "dispenser-pump", "caps-closures", "mathematical-learning-blocks"],
+    items: ["furniture-sector", "luggage-sector", "dispenser-pump", "caps-closures", "mathematical-learning-blocks", "stationery-sector"],
   },
 };
 
