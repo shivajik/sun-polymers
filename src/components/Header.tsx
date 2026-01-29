@@ -16,7 +16,7 @@ const productGroups = {
   industrial: {
     title: "Industrial Sectors",
     icon: Building2,
-    items: ["automotive-sector", "electrical-sector", "construction-sector", "telecommunication-sector", "agriculture-sector"],
+    items: ["automotive-sector", "electrical-sector", "construction-sector", "agriculture-sector"],
   },
   consumer: {
     title: "Consumer Products",
@@ -335,7 +335,7 @@ const Header = () => {
                             to="/products" 
                             className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-accent transition-colors"
                           >
-                            <span>Browse All 12 Product Categories</span>
+                            <span>Browse All 11 Product Categories</span>
                             <ArrowRight className="w-4 h-4" />
                           </Link>
                           <div className="flex items-center gap-4">
