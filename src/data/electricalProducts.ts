@@ -3,8 +3,6 @@ import blowerHousing from "@/assets/products/electrical/blower-housing.jpg";
 import carrierLed from "@/assets/products/electrical/carrier-led.jpg";
 import cflSocketHousing from "@/assets/products/electrical/cfl-socket-housing.jpg";
 import electricalCover from "@/assets/products/electrical/electrical-cover.jpg";
-import injectionMould1 from "@/assets/products/electrical/injection-mould-1.jpg";
-import injectionMould2 from "@/assets/products/electrical/injection-mould-2.jpg";
 import diffuser from "@/assets/products/electrical/diffuser.jpg";
 import mcbBoxHousing from "@/assets/products/electrical/mcb-box-housing.jpg";
 import nylonConnectors from "@/assets/products/electrical/nylon-connectors.jpg";
@@ -47,18 +45,6 @@ export const electricalProducts: ElectricalProduct[] = [
     name: "Electrical Cover Panel",
     description: "Ventilated cover panel with mounting points for electrical enclosures.",
     image: electricalCover,
-  },
-  {
-    id: "injection-mould-1",
-    name: "Injection Mould - Multi Cavity",
-    description: "Precision multi-cavity injection mould for high-volume electrical component production.",
-    image: injectionMould1,
-  },
-  {
-    id: "injection-mould-2",
-    name: "Injection Mould - Single Cavity",
-    description: "High-precision single cavity mould for electrical housing manufacturing.",
-    image: injectionMould2,
   },
   {
     id: "diffuser",
