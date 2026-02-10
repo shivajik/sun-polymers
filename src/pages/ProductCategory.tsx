@@ -275,9 +275,9 @@ const ProductCategory = () => {
                   <span className="inline-block px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-semibold mb-6">
                     Our Products
                   </span>
-                  <h2 className="font-heading text-3xl md:text-4xl text-foreground mb-8">
-                    <span className="text-accent">Furniture</span> Product Range
-                  </h2>
+                   <h2 className="font-heading text-3xl md:text-4xl text-foreground mb-8">
+                     <span className="text-accent">Furniture Products</span> / Pipe Joiners / Connectors
+                   </h2>
                   
                   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {furnitureProducts.map((item, index) => (
