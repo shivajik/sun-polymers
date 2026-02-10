@@ -255,6 +255,9 @@ const ProductCategory = () => {
                             className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
                           />
                         </div>
+                        <div className="p-3 text-center">
+                          <p className="text-sm font-medium text-foreground">{item.name}</p>
+                        </div>
                       </motion.div>
                     ))}
                   </div>
