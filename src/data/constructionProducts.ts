@@ -1,20 +1,19 @@
-import bucket1 from "@/assets/products/construction/bucket-1.jpg";
-import bucket2 from "@/assets/products/construction/bucket-2.jpg";
-import bucket3 from "@/assets/products/construction/bucket-3.jpg";
-import bucket4 from "@/assets/products/construction/bucket-4.jpg";
-import safetyCapMushroom from "@/assets/products/construction/safety-cap-mushroom.jpg";
-import safetyCapBall from "@/assets/products/construction/safety-cap-ball.jpg";
-import spacersSet from "@/assets/products/construction/spacers-set.jfif";
-import spacersColoredNew from "@/assets/products/construction/spacers-colored-new.jpeg";
+import pvcShimPad from "@/assets/products/construction/pvc-shim-pad.jpg";
+import spacersColored from "@/assets/products/construction/spacers-colored.jpeg";
+import orionBucket from "@/assets/products/construction/orion-bucket.jpg";
+import dynamicBucket from "@/assets/products/construction/dynamic-bucket.jpg";
+import galaxyBucket from "@/assets/products/construction/galaxy-bucket.jpg";
+import spiBucket from "@/assets/products/construction/spi-bucket.jpg";
+import rebarSafetyCap from "@/assets/products/construction/rebar-safety-cap.jpg";
 import scaffoldingTag from "@/assets/products/construction/scaffolding-tag.jpg";
-import safetyHelmetYellow from "@/assets/products/construction/safety-helmet-yellow.webp";
+import safetyHelmetRatchet from "@/assets/products/construction/safety-helmet-ratchet.jpg";
 import safetyHelmetNape from "@/assets/products/construction/safety-helmet-nape.jpg";
-
 import lanyardHarness from "@/assets/products/construction/lanyard-harness.jpg";
 import pvcCone from "@/assets/products/construction/pvc-cone.jpg";
 import pvcPipe from "@/assets/products/construction/pvc-pipe.jpg";
 import pvcChamfer from "@/assets/products/construction/pvc-chamfer.jpg";
 import miscFittings1 from "@/assets/products/construction/misc-fittings-1.jpg";
+import miscFittings2 from "@/assets/products/construction/misc-fittings-2.jpg";
 
 export interface ConstructionProduct {
   id: number;
@@ -26,98 +25,98 @@ export interface ConstructionProduct {
 export const constructionProducts: ConstructionProduct[] = [
   {
     id: 1,
-    name: "Construction Bucket - Black",
-    description: "Durable black construction bucket with metal handle",
-    image: bucket1,
+    name: "PVC Packing Shim Pad",
+    description: "Durable PVC packing shim pad for construction",
+    image: pvcShimPad,
   },
   {
     id: 2,
-    name: "SPI Bucket - Yellow",
-    description: "Heavy-duty yellow bucket with SPI branding",
-    image: bucket2,
+    name: "Spacers (1 to 5 MM)",
+    description: "Construction spacers in various sizes",
+    image: spacersColored,
   },
   {
     id: 3,
-    name: "Construction Bucket - Dark",
-    description: "Sturdy dark construction bucket",
-    image: bucket3,
+    name: "Orion Bucket (8 Ltr)",
+    description: "8 litre Orion construction bucket",
+    image: orionBucket,
   },
   {
     id: 4,
-    name: "Construction Bucket - Large",
-    description: "Large capacity construction bucket with handle",
-    image: bucket4,
+    name: "Dynamic Bucket (10 Ltr)",
+    description: "10 litre Dynamic construction bucket",
+    image: dynamicBucket,
   },
   {
     id: 5,
-    name: "Rebar Safety Cap - Mushroom",
-    description: "Protective mushroom cap for rebar ends",
-    image: safetyCapMushroom,
+    name: "Galaxy Bucket (12 Ltr)",
+    description: "12 litre Galaxy construction bucket",
+    image: galaxyBucket,
   },
   {
     id: 6,
-    name: "Rebar Safety Cap - Ball",
-    description: "Ball-type protective cap for rebar ends",
-    image: safetyCapBall,
+    name: "SPI Bucket (12 Ltr)",
+    description: "12 litre SPI construction bucket",
+    image: spiBucket,
   },
   {
     id: 7,
-    name: "Spacers Set",
-    description: "Construction spacers in various sizes",
-    image: spacersSet,
+    name: "Rebar Safety Cap (8-16 mm / 16-32 mm)",
+    description: "Protective cap for rebar ends",
+    image: rebarSafetyCap,
   },
   {
     id: 8,
-    name: "Colored Spacers",
-    description: "Available in multiple colors - Green, Black, White, Blue, Red",
-    image: spacersColoredNew,
-  },
-  {
-    id: 9,
-    name: "PVC Cone",
-    description: "Traffic and safety marking cone",
-    image: pvcCone,
-  },
-  {
-    id: 10,
-    name: "Safety Helmet - Yellow",
-    description: "Industrial safety helmet in high-visibility yellow",
-    image: safetyHelmetYellow,
-  },
-  {
-    id: 11,
-    name: "Safety Helmet - Nape Type",
-    description: "Industrial safety helmet with nape strap",
-    image: safetyHelmetNape,
-  },
-  {
-    id: 13,
-    name: "Lanyard and Safety Harness",
-    description: "Fall protection safety equipment",
-    image: lanyardHarness,
-  },
-  {
-    id: 14,
     name: "Scaffolding Tag Holder",
     description: "Safety inspection and erection record holder",
     image: scaffoldingTag,
   },
   {
-    id: 15,
+    id: 9,
+    name: "Safety Helmet - Ratchet Type",
+    description: "Industrial safety helmet ratchet type",
+    image: safetyHelmetRatchet,
+  },
+  {
+    id: 10,
+    name: "Safety Helmet - Nape Type",
+    description: "Industrial safety helmet with nape strap",
+    image: safetyHelmetNape,
+  },
+  {
+    id: 11,
+    name: "Lanyard and Safety Harness",
+    description: "Fall protection safety equipment",
+    image: lanyardHarness,
+  },
+  {
+    id: 12,
+    name: "PVC Cone",
+    description: "Traffic and safety marking cone",
+    image: pvcCone,
+  },
+  {
+    id: 13,
     name: "PVC Pipe",
     description: "Construction-grade PVC piping",
     image: pvcPipe,
   },
   {
-    id: 16,
+    id: 14,
     name: "PVC Chamfer",
     description: "Concrete forming chamfer strips",
     image: pvcChamfer,
   },
   {
-    id: 17,
+    id: 15,
     name: "Miscellaneous Fittings",
     description: "Various construction fittings and accessories",
     image: miscFittings1,
+  },
+  {
+    id: 16,
+    name: "Miscellaneous Fittings",
+    description: "Various construction fittings and accessories",
+    image: miscFittings2,
   },
 ];
