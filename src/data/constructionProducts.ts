@@ -12,8 +12,6 @@ import lanyardHarness from "@/assets/products/construction/lanyard-harness.jpg";
 import pvcCone from "@/assets/products/construction/pvc-pipe.jpg";
 import pvcPipe from "@/assets/products/construction/pvc-chamfer.jpg";
 import pvcChamfer from "@/assets/products/construction/misc-fittings-1.jpg";
-import miscFittings1 from "@/assets/products/construction/rebar-safety-cap.jpg";
-import miscFittings2 from "@/assets/products/construction/misc-fittings-2.jpg";
 
 export interface ConstructionProduct {
   id: number;
@@ -106,17 +104,5 @@ export const constructionProducts: ConstructionProduct[] = [
     name: "PVC Chamfer",
     description: "PVC Chamfer",
     image: pvcChamfer,
-  },
-  {
-    id: 15,
-    name: "Miscellaneous fittings",
-    description: "Miscellaneous fittings",
-    image: miscFittings1,
-  },
-  {
-    id: 16,
-    name: "Miscellaneous fittings",
-    description: "Miscellaneous fittings",
-    image: miscFittings2,
   },
 ];
