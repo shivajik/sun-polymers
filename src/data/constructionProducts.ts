@@ -1,19 +1,18 @@
 import pvcShimPad from "@/assets/products/construction/pvc-shim-pad.png";
 import spacersColored from "@/assets/products/construction/spacers-colored.jpeg";
-import orionBucket from "@/assets/products/construction/orion-bucket.jpg";
 import orionBucketNew from "@/assets/products/construction/orion-bucket-new.png";
-import dynamicBucket from "@/assets/products/construction/dynamic-bucket.jpg";
-import galaxyBucket from "@/assets/products/construction/galaxy-bucket.jpg";
-import spiBucket from "@/assets/products/construction/spi-bucket.jpg";
-import rebarSafetyCap from "@/assets/products/construction/rebar-safety-cap.jpg";
+import bucket3 from "@/assets/products/construction/bucket-3.jpg";
+import bucket4 from "@/assets/products/construction/bucket-4.jpg";
+import spiBucket from "@/assets/products/construction/dynamic-bucket.jpg";
+import rebarSafetyCap from "@/assets/products/construction/safety-cap-mushroom.jpg";
 import scaffoldingTag from "@/assets/products/construction/scaffolding-tag.jpg";
 import safetyHelmetRatchet from "@/assets/products/construction/safety-helmet-ratchet.jpg";
 import safetyHelmetNape from "@/assets/products/construction/safety-helmet-nape.jpg";
 import lanyardHarness from "@/assets/products/construction/lanyard-harness.jpg";
-import pvcCone from "@/assets/products/construction/pvc-cone.jpg";
-import pvcPipe from "@/assets/products/construction/pvc-pipe.jpg";
-import pvcChamfer from "@/assets/products/construction/pvc-chamfer.jpg";
-import miscFittings1 from "@/assets/products/construction/misc-fittings-1.jpg";
+import pvcCone from "@/assets/products/construction/pvc-pipe.jpg";
+import pvcPipe from "@/assets/products/construction/pvc-chamfer.jpg";
+import pvcChamfer from "@/assets/products/construction/misc-fittings-1.jpg";
+import miscFittings1 from "@/assets/products/construction/rebar-safety-cap.jpg";
 import miscFittings2 from "@/assets/products/construction/misc-fittings-2.jpg";
 
 export interface ConstructionProduct {
@@ -44,15 +43,15 @@ export const constructionProducts: ConstructionProduct[] = [
   },
   {
     id: 4,
-    name: "Galaxy Bucket 12 Ltr",
-    description: "Galaxy Bucket 12 Ltr",
-    image: galaxyBucket,
+    name: "Dynamic Bucket 10 Ltr",
+    description: "Dynamic Bucket 10 Ltr",
+    image: bucket3,
   },
   {
     id: 5,
-    name: "Dynamic Bucket 10 Ltr",
-    description: "Dynamic Bucket 10 Ltr",
-    image: dynamicBucket,
+    name: "Galaxy Bucket 12 Ltr",
+    description: "Galaxy Bucket 12 Ltr",
+    image: bucket4,
   },
   {
     id: 6,
