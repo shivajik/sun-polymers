@@ -1,4 +1,4 @@
-import pvcShimPad from "@/assets/products/construction/pvc-shim-pad.jpg";
+import pvcShimPad from "@/assets/products/construction/pvc-shim-pad.png";
 import spacersColored from "@/assets/products/construction/spacers-colored.jpeg";
 import orionBucket from "@/assets/products/construction/orion-bucket.jpg";
 import dynamicBucket from "@/assets/products/construction/dynamic-bucket.jpg";
