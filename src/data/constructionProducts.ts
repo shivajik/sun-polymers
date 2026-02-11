@@ -25,8 +25,8 @@ export interface ConstructionProduct {
 export const constructionProducts: ConstructionProduct[] = [
   {
     id: 1,
-    name: "Orion Bucket 8 Ltr",
-    description: "Orion Bucket 8 Ltr",
+    name: "PVC Packing Shim Pad",
+    description: "PVC Packing Shim Pad",
     image: pvcShimPad,
   },
   {
