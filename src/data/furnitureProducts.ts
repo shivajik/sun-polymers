@@ -165,7 +165,7 @@ export const furnitureProducts: FurnitureProduct[] = [
   },
   {
     id: "connector-set-black",
-    name: "Connector Set (Black)",
+    name: "Connector Set",
     description: "Complete set of black connectors including corners, joints, and caps",
     image: connectorSetBlack,
   },
