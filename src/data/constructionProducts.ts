@@ -37,8 +37,8 @@ export const constructionProducts: ConstructionProduct[] = [
   },
   {
     id: 3,
-    name: "Orion Bucket 8 Ltr",
-    description: "Orion Bucket 8 Ltr",
+    name: "Galaxy Bucket 12 Ltr",
+    description: "Galaxy Bucket 12 Ltr",
     image: orionBucket,
   },
   {
