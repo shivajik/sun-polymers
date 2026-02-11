@@ -1,6 +1,7 @@
 import pvcShimPad from "@/assets/products/construction/pvc-shim-pad.png";
 import spacersColored from "@/assets/products/construction/spacers-colored.jpeg";
 import orionBucket from "@/assets/products/construction/orion-bucket.jpg";
+import orionBucketNew from "@/assets/products/construction/orion-bucket-new.png";
 import dynamicBucket from "@/assets/products/construction/dynamic-bucket.jpg";
 import galaxyBucket from "@/assets/products/construction/galaxy-bucket.jpg";
 import spiBucket from "@/assets/products/construction/spi-bucket.jpg";
@@ -37,21 +38,21 @@ export const constructionProducts: ConstructionProduct[] = [
   },
   {
     id: 3,
-    name: "Galaxy Bucket 12 Ltr",
-    description: "Galaxy Bucket 12 Ltr",
-    image: orionBucket,
+    name: "Orion Bucket 8 Ltr",
+    description: "Orion Bucket 8 Ltr",
+    image: orionBucketNew,
   },
   {
     id: 4,
-    name: "Dynamic Bucket 10 Ltr",
-    description: "Dynamic Bucket 10 Ltr",
-    image: dynamicBucket,
-  },
-  {
-    id: 5,
     name: "Galaxy Bucket 12 Ltr",
     description: "Galaxy Bucket 12 Ltr",
     image: galaxyBucket,
+  },
+  {
+    id: 5,
+    name: "Dynamic Bucket 10 Ltr",
+    description: "Dynamic Bucket 10 Ltr",
+    image: dynamicBucket,
   },
   {
     id: 6,
