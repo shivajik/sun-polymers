@@ -33,7 +33,7 @@ export interface FurnitureProduct {
 export const furnitureProducts: FurnitureProduct[] = [
   {
     id: "2-way-corner-white",
-    name: "2-Way Corner Connector (White)",
+    name: "2 Way Plastic Corner",
     description: "L-shaped corner connector for aluminum tube furniture assembly",
     image: twoWayCornerWhite,
   },
@@ -87,7 +87,7 @@ export const furnitureProducts: FurnitureProduct[] = [
   },
   {
     id: "t-connector",
-    name: "T-Connector",
+    name: "2 Way Plastic Corner Square",
     description: "T-shaped connector for mid-frame furniture joints",
     image: tConnector,
   },
