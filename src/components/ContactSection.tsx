@@ -263,18 +263,11 @@ const ContactSection = () => {
                     <div className="text-sm text-muted-foreground mb-1">{info.title}</div>
                     {info.href ? (
                       <div className="flex flex-col gap-1">
-                        <a
-                          href={info.href}
-                          className="font-heading font-semibold text-lg text-foreground hover:text-accent transition-colors"
-                        >
+                        <a href={info.href} className="font-heading font-medium text-base">
                           {info.value}
                         </a>
                         {info.additionalValues?.map((additional, idx) => (
-                          <a
-                            key={idx}
-                            href={additional.href}
-                            className="font-heading font-medium text-base text-foreground/80 hover:text-accent transition-colors"
-                          >
+                          <a key={idx} href={additional.href}>
                             {additional.value}
                           </a>
                         ))}

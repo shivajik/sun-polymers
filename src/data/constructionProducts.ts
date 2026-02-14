@@ -7,7 +7,7 @@ import spiBucket from "@/assets/products/construction/dynamic-bucket.jpg";
 import rebarSafetyCap from "@/assets/products/construction/safety-cap-mushroom.jpg";
 import scaffoldingTag from "@/assets/products/construction/scaffolding-tag.jpg";
 import safetyHelmetRatchet from "@/assets/products/construction/safety-helmet-ratchet.jpg";
-import safetyHelmetNape from "@/assets/products/construction/safety-helmet-nape.jpg";
+import safetyHelmetNape from "@/assets/products/construction/safety-helmet-yellow.webp";
 import lanyardHarness from "@/assets/products/construction/lanyard-harness.jpg";
 import pvcCone from "@/assets/products/construction/pvc-pipe.jpg";
 import pvcPipe from "@/assets/products/construction/pvc-chamfer.jpg";
@@ -41,13 +41,13 @@ export const constructionProducts: ConstructionProduct[] = [
   },
   {
     id: 4,
-    name: "Dynamic Bucket 10 Ltr",
+    name: "Galaxy Bucket 12 Ltr",
     description: "Dynamic Bucket 10 Ltr",
     image: bucket3,
   },
   {
     id: 5,
-    name: "Galaxy Bucket 12 Ltr",
+    name: "Dynamic Bucket 10 Ltr",
     description: "Galaxy Bucket 12 Ltr",
     image: bucket4,
   },
