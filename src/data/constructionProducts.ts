@@ -8,7 +8,7 @@ import rebarSafetyCap from "@/assets/products/construction/safety-cap-mushroom.j
 import scaffoldingTag from "@/assets/products/construction/scaffolding-tag.jpg";
 import safetyHelmetRatchet from "@/assets/products/construction/safety-helmet-ratchet.jpg";
 import safetyHelmetNape from "@/assets/products/construction/safety-helmet-yellow.webp";
-import lanyardHarness from "@/assets/products/construction/lanyard-harness.jpg";
+import lanyardHarness from "@/assets/products/construction/combine-belt.jpg";
 import pvcCone from "@/assets/products/construction/pvc-pipe.jpg";
 import pvcPipe from "@/assets/products/construction/pvc-chamfer.jpg";
 import pvcChamfer from "@/assets/products/construction/misc-fittings-1.jpg";
