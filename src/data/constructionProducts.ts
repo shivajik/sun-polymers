@@ -7,7 +7,7 @@ import spiBucket from "@/assets/products/construction/dynamic-bucket.jpg";
 import rebarSafetyCap from "@/assets/products/construction/safety-cap-mushroom.jpg";
 import scaffoldingTag from "@/assets/products/construction/scaffolding-tag.jpg";
 import safetyHelmetRatchet from "@/assets/products/construction/safety-helmet-ratchet.jpg";
-import safetyHelmetNape from "@/assets/products/construction/safety-helmet-yellow.webp";
+import safetyHelmetNape from "@/assets/products/construction/safety-helmet-yellow.jpg";
 import lanyardHarness from "@/assets/products/construction/combine-belt.jpg";
 import pvcCone from "@/assets/products/construction/pvc-pipe.jpg";
 import pvcPipe from "@/assets/products/construction/pvc-chamfer.jpg";
